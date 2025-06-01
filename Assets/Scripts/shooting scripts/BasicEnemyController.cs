@@ -42,7 +42,7 @@ public class BasicEnemyController : MonoBehaviour
 
             boolet.GetComponent<BulletScript>().setDamage(damage);
 
-            Destroy(boolet, 3f);
+            Destroy(boolet, 1f);
         }
     }
 
