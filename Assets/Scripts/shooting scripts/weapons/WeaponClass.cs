@@ -5,6 +5,7 @@ public abstract class WeaponClass : MonoBehaviour
     protected GameObject bulletPrefab;
     protected Transform player;
     protected int ID;
+    protected string weaponName;
     protected bool holdToShoot;
     protected float shootInterval;
     protected float currentInterval = 0f;
@@ -27,6 +28,16 @@ public abstract class WeaponClass : MonoBehaviour
             shootBullet();
         else if (!holdToShoot && Input.GetMouseButtonDown(0) && currentInterval >= shootInterval)
             shootBullet();
+    }
+
+    public virtual string getName()
+    {
+        return name;
+    }
+
+    public virtual int getCurrentAmmo()
+    {
+        return currentAmmo;
     }
 
     protected abstract void shootBullet();

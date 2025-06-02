@@ -16,7 +16,7 @@ public class ShooterController : MonoBehaviour
     void Awake()
     {
         addWeapons();
-        currentWeapon = weaponsList[0];
+        currentWeapon = weaponsList[3];
     }
 
     void addWeapons()
@@ -26,6 +26,18 @@ public class ShooterController : MonoBehaviour
         PistolWeapon pistol = weaponEmpties[0].GetComponent<PistolWeapon>();
         pistol.make(bulletPrefab, transform);
         weaponsList.Insert(0, pistol);
+
+        RifleWeapon rifle = weaponEmpties[1].GetComponent<RifleWeapon>();
+        rifle.make(bulletPrefab, transform);
+        weaponsList.Insert(1, rifle);
+
+        MinigunWeapon mini = weaponEmpties[2].GetComponent<MinigunWeapon>();
+        mini.make(bulletPrefab, transform);
+        weaponsList.Insert(2, mini);
+
+        ShotgunWeapon shot = weaponEmpties[3].GetComponent<ShotgunWeapon>();
+        shot.make(bulletPrefab, transform);
+        weaponsList.Insert(3, shot);
     }
 
     // Update is called once per frame
