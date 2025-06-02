@@ -129,6 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 218295876}
   - component: {fileID: 218295875}
+  - component: {fileID: 218295877}
+  - component: {fileID: 218295878}
   m_Layer: 0
   m_Name: Jeepney
   m_TagString: Untagged
@@ -206,6 +208,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218295877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218295874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f367450fb2d6f440fa453d643acabce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSpeed: 10
+  normalSpeedMax: 75
+  normalTurningSpeed: 0
+  boostSpeed: 0
+  boostSpeedMax: 0
+  boostTurningSpeed: 0
+  deceleratingSpeed: 10
+  deceleratingSpeedMax: 30
+  friction: 0.96
+  accelerateKey: 119
+  decelerateKey: 115
+  boostKey: 32
+  debugKey: 0
+--- !u!50 &218295878
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218295874}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0.1
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &893444645
 GameObject:
   m_ObjectHideFlags: 0
