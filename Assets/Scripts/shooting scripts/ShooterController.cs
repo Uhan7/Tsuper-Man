@@ -6,17 +6,19 @@ public class ShooterController : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] GameObject[] weaponEmpties;
     [SerializeField] float Hp = 100f;
+    [SerializeField] float weaponSwitchCooldown = 1f;
 
-    //0 - pistol, 1 - rifle
+    //0 - pistol, 1 - rifle, 2 - minigun, 3 - shotgun
     List<WeaponClass> weaponsList;
     WeaponClass currentWeapon;
+    float SwitchTimer = 0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         addWeapons();
-        currentWeapon = weaponsList[3];
+        currentWeapon = weaponsList[0];
     }
 
     void addWeapons()
@@ -40,9 +42,39 @@ public class ShooterController : MonoBehaviour
         weaponsList.Insert(3, shot);
     }
 
+    //update when adding more or less weapons
+    void switchWeapon()
+    {
+        SwitchTimer += Time.deltaTime;
+        if (SwitchTimer < weaponSwitchCooldown)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentWeapon = weaponsList[0];
+            SwitchTimer = 0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentWeapon = weaponsList[1];
+            SwitchTimer = 0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentWeapon = weaponsList[2];
+            SwitchTimer = 0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            currentWeapon = weaponsList[3];
+            SwitchTimer = 0f;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
+        switchWeapon();
         currentWeapon.shoot();
     }
 

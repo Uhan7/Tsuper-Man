@@ -17,13 +17,14 @@ public class PistolWeapon : WeaponClass
         GameObject boolet = Instantiate(bulletPrefab); //maybe switch to pool
 
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0f;
         Vector2 direction = mouseWorldPos - player.position;
 
         Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
         booletBody.linearVelocity = bulletSpeed * direction.normalized;
 
         float offset = 0.6f; //spawns the bullet outside the player 
-        boolet.transform.position = transform.position + (Vector3)(offset * direction.normalized);
+        boolet.transform.position = player.position + (Vector3)(offset * direction.normalized);
 
         boolet.GetComponent<BulletScript>().setDamage(damage);
 

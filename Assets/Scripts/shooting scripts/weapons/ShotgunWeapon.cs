@@ -31,7 +31,7 @@ public class ShotgunWeapon : WeaponClass
             booletBody.linearVelocity = bulletSpeed * spreadDirection.normalized;
 
             float offset = 0.6f; //spawns the bullet outside the player 
-            boolet.transform.position = transform.position + (Vector3)(offset * direction.normalized);
+            boolet.transform.position = player.position + (Vector3)(offset * direction.normalized);
 
             boolet.GetComponent<BulletScript>().setDamage(damage);
 

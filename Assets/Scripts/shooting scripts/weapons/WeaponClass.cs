@@ -21,6 +21,11 @@ public abstract class WeaponClass : MonoBehaviour
         setUpValues();
     }
 
+    public virtual int getWeaponID()
+    {
+        return ID;
+    }
+
     public virtual void shoot()
     {
         currentInterval += Time.deltaTime;
