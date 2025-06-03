@@ -223,13 +223,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumSpeedForTurn: 1.5
   normalSpeed: 12
-  normalSpeedMax: 50
-  normalTurningSpeed: 120
-  deceleratingSpeed: 20
-  deceleratingSpeedMax: 30
-  friction: 0.975
-  turningFriction: 1
-  turningDecay: 0.05
+  normalSpeedMax: 40
+  normalTurningSpeed: 200
+  deceleratingSpeed: 12
+  deceleratingSpeedMax: 35
+  friction: 0.98
+  turningFriction: 0.985
+  turningDecay: 0.06
   accelerateKey: 119
   decelerateKey: 115
   turnRightKey: 100
@@ -250,7 +250,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0.2
-  m_AngularDamping: 4.5
+  m_AngularDamping: 4.2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jeepneyCamera: {fileID: 818664565}
   minimumLensSize: 7
-  maximumLensSize: 10.5
+  maximumLensSize: 11.5
 --- !u!1 &818664563
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +616,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1046472290338456136, guid: c0c4fc22607d14182a6e03f234b873fa, type: 3}
+  m_Sprite: {fileID: 3650239776638869455, guid: 295ceaa857b5f452aa6f6e032500e342, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -636,8 +636,8 @@ Transform:
   m_GameObject: {fileID: 1691444280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 99, y: 99, z: 1}
+  m_LocalPosition: {x: 26.9, y: 11.8, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

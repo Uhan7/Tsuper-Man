@@ -77,6 +77,8 @@ public class JeepneyMovement : MonoBehaviour
         else directionFactor = 0;
 
         ApplyTurningFriction();
+        if (turningLeft || turningRight) ApplyLateralFriction(2f);
+
         LimitSpeed();
     }
 
@@ -128,6 +130,8 @@ public class JeepneyMovement : MonoBehaviour
         float turnScale = Mathf.Clamp(rb.linearVelocity.magnitude * 1.5f, -deceleratingSpeedMax, deceleratingSpeedMax) / deceleratingSpeedMax;
 
         rb.angularVelocity = (30f + turnSpeed * turnScale) * directionFactor;
+
+        if (turningLeft || turningRight) rb.linearVelocity *= turningFriction;
     }
 
     void ApplyFriction()
@@ -140,8 +144,15 @@ public class JeepneyMovement : MonoBehaviour
         Vector2 forward = rb.transform.up;
         float forwardSpeed = Vector2.Dot(rb.linearVelocity, forward);
         rb.linearVelocity = forward * forwardSpeed;
+    }
 
-        if (turningLeft || turningRight) rb.linearVelocity *= turningFriction;
+    void ApplyLateralFriction(float intensity)
+    {
+        Vector2 right = rb.transform.right;
+        float lateralSpeed = Vector2.Dot(rb.linearVelocity, right);
+        Vector2 lateralVelocity = right * lateralSpeed;
+
+        rb.AddForce(-lateralVelocity * intensity, ForceMode2D.Force);
     }
 
     void LimitSpeed()
