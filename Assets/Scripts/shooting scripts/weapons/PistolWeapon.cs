@@ -9,6 +9,7 @@ public class PistolWeapon : WeaponClass
         holdToShoot = false;
         shootInterval = 0.5f;
         damage = 5f;
+        currentAmmo = -69; //ID for infinite ammo, yes
     }
 
     protected override void shootBullet()
@@ -23,8 +24,7 @@ public class PistolWeapon : WeaponClass
         Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
         booletBody.linearVelocity = bulletSpeed * direction.normalized;
 
-        float offset = 0.6f; //spawns the bullet outside the player 
-        boolet.transform.position = player.position + (Vector3)(offset * direction.normalized);
+        boolet.transform.position = player.position + (Vector3)(playerOffset * direction.normalized);
 
         boolet.GetComponent<BulletScript>().setDamage(damage);
 

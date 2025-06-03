@@ -49,22 +49,22 @@ public class ShooterController : MonoBehaviour
         if (SwitchTimer < weaponSwitchCooldown)
             return;
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) || (currentWeapon.getCurrentAmmo() <= 0 && currentWeapon.getWeaponID() != 0))
         {
             currentWeapon = weaponsList[0];
             SwitchTimer = 0f;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && weaponsList[1].getCurrentAmmo() > 0)
         {
             currentWeapon = weaponsList[1];
             SwitchTimer = 0f;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && weaponsList[2].getCurrentAmmo() > 0)
         {
             currentWeapon = weaponsList[2];
             SwitchTimer = 0f;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && weaponsList[3].getCurrentAmmo() > 0)
         {
             currentWeapon = weaponsList[3];
             SwitchTimer = 0f;
@@ -85,5 +85,20 @@ public class ShooterController : MonoBehaviour
             Hp -= collision.gameObject.GetComponent<BulletScript>().getDamage();
             Debug.Log("player hp: " + Hp);
         }
+    }
+
+    public string getCurrentGunName()
+    {
+        return currentWeapon.getWeaponName();
+    }
+
+    public int getCurrentGunID()
+    {
+        return currentWeapon.getWeaponID();
+    }
+
+    public int getCurrentGunAmmo()
+    {
+        return currentWeapon.getCurrentAmmo();
     }
 }

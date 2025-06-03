@@ -1258,6 +1258,7 @@ GameObject:
   - component: {fileID: 1177033725}
   - component: {fileID: 1177033727}
   - component: {fileID: 1177033726}
+  - component: {fileID: 1177033728}
   m_Layer: 5
   m_Name: ammo count
   m_TagString: Untagged
@@ -1304,7 +1305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: infinite
+  m_text: none
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1383,6 +1384,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177033724}
   m_CullTransparentMesh: 1
+--- !u!114 &1177033728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177033724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6aa35cf6e200c428fce8e3cdec33b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1322974719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1760,7 @@ GameObject:
   - component: {fileID: 1701780029}
   - component: {fileID: 1701780031}
   - component: {fileID: 1701780030}
+  - component: {fileID: 1701780032}
   m_Layer: 5
   m_Name: gun name
   m_TagString: Untagged
@@ -1872,6 +1886,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701780028}
   m_CullTransparentMesh: 1
+--- !u!114 &1701780032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701780028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba89192ca226c948a15d1739e46f9d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2034271493
 GameObject:
   m_ObjectHideFlags: 0

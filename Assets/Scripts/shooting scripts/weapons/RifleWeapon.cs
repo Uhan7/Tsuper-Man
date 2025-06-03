@@ -27,8 +27,7 @@ public class RifleWeapon : WeaponClass
         Vector2 spreadDirection = Quaternion.Euler(0, 0, rand) * direction;
         booletBody.linearVelocity = bulletSpeed * spreadDirection.normalized;
 
-        float offset = 0.6f; //spawns the bullet outside the player 
-        boolet.transform.position = player.position + (Vector3)(offset * direction.normalized);
+        boolet.transform.position = player.position + (Vector3)(playerOffset * direction.normalized);
 
         boolet.GetComponent<BulletScript>().setDamage(damage);
 

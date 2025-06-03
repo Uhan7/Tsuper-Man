@@ -10,6 +10,7 @@ public abstract class WeaponClass : MonoBehaviour
     protected float shootInterval;
     protected float currentInterval = 0f;
     protected float bulletSpeed = 15f;
+    protected float playerOffset = 0.6f;
     protected float damage;
     protected int maxAmmo;
     protected int currentAmmo;
@@ -29,15 +30,15 @@ public abstract class WeaponClass : MonoBehaviour
     public virtual void shoot()
     {
         currentInterval += Time.deltaTime;
-        if (holdToShoot && Input.GetMouseButton(0) && currentInterval >= shootInterval)
+        if (holdToShoot && Input.GetMouseButton(0) && currentInterval >= shootInterval && (currentAmmo == -69 || currentAmmo > 0))
             shootBullet();
-        else if (!holdToShoot && Input.GetMouseButtonDown(0) && currentInterval >= shootInterval)
+        else if (!holdToShoot && Input.GetMouseButtonDown(0) && currentInterval >= shootInterval && (currentAmmo == -69 || currentAmmo > 0))
             shootBullet();
     }
 
-    public virtual string getName()
+    public virtual string getWeaponName()
     {
-        return name;
+        return weaponName;
     }
 
     public virtual int getCurrentAmmo()
