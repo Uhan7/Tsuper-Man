@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 218295875}
   - component: {fileID: 218295877}
   - component: {fileID: 218295878}
+  - component: {fileID: 218295879}
   m_Layer: 0
   m_Name: Jeepney
   m_TagString: Untagged
@@ -221,15 +222,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumSpeedForTurn: 1.5
-  normalSpeed: 8
-  normalSpeedMax: 40
+  normalSpeed: 12
+  normalSpeedMax: 50
   normalTurningSpeed: 120
-  boostSpeed: 0
-  boostSpeedMax: 0
-  boostTurningSpeed: 0
   deceleratingSpeed: 20
-  deceleratingSpeedMax: 35
-  friction: 0.96
+  deceleratingSpeedMax: 30
+  friction: 0.975
+  turningFriction: 1
   turningDecay: 0.05
   accelerateKey: 119
   decelerateKey: 115
@@ -251,7 +250,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0.2
-  m_AngularDamping: 5
+  m_AngularDamping: 4.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -264,6 +263,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &218295879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218295874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8a16646343e4e448536d50aba916ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jeepneyCamera: {fileID: 818664565}
+  minimumLensSize: 7
+  maximumLensSize: 10.5
 --- !u!1 &818664563
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +290,7 @@ GameObject:
   - component: {fileID: 818664565}
   - component: {fileID: 818664564}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: Cinemachine Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -338,7 +352,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -434,7 +448,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -552,7 +566,7 @@ GameObject:
   - component: {fileID: 1691444282}
   - component: {fileID: 1691444281}
   m_Layer: 0
-  m_Name: minesweep_0
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,17 +10,18 @@ public class JeepneyMovement : MonoBehaviour
 
     // Values
     [SerializeField] private float normalSpeed;
-    [SerializeField] private float normalSpeedMax;
+    public float normalSpeedMax;
     [SerializeField] private float normalTurningSpeed;
 
-    [SerializeField] private float boostSpeed;
-    [SerializeField] private float boostSpeedMax;
-    [SerializeField] private float boostTurningSpeed;
+    //[SerializeField] private float boostSpeed;
+    //[SerializeField] private float boostSpeedMax;
+    //[SerializeField] private float boostTurningSpeed;
 
     [SerializeField] private float deceleratingSpeed;
     [SerializeField] private float deceleratingSpeedMax;
 
     [SerializeField] private float friction;
+    [SerializeField] private float turningFriction;
 
     private float directionFactor;
     [SerializeField] private float turningDecay;
@@ -139,6 +140,8 @@ public class JeepneyMovement : MonoBehaviour
         Vector2 forward = rb.transform.up;
         float forwardSpeed = Vector2.Dot(rb.linearVelocity, forward);
         rb.linearVelocity = forward * forwardSpeed;
+
+        if (turningLeft || turningRight) rb.linearVelocity *= turningFriction;
     }
 
     void LimitSpeed()
