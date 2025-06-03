@@ -6,6 +6,7 @@ public class JeepneyCamera : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField] private CinemachineCamera jeepneyCamera;
+    [SerializeField] private JeepneyMovement jeepneyMoveScript;
 
     [SerializeField] private float minimumLensSize;
     [SerializeField] private float maximumLensSize;
@@ -15,6 +16,8 @@ public class JeepneyCamera : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        jeepneyMoveScript = GetComponent<JeepneyMovement>();
     }
 
     private void Start()
@@ -32,8 +35,15 @@ public class JeepneyCamera : MonoBehaviour
 
     void ChangeLensSize()
     {
-        float scaleValue = 2 * (rb.linearVelocity.magnitude + minimumLensSize-1) * (maximumLensSize-1) / GetComponent<JeepneyMovement>().normalSpeedMax;
+        // Calculate target size based on input
+        float targetSize = Mathf.Clamp(jeepneyMoveScript.accelerateInputTimer + minimumLensSize - 0.2f, minimumLensSize, maximumLensSize);
 
-        jeepneyCamera.Lens.OrthographicSize = Mathf.Clamp(scaleValue, minimumLensSize, maximumLensSize);
+        // Smoothly interpolate toward target size
+        float lerpSpeed = 5f; // Adjust this value for faster/slower zoom
+        jeepneyCamera.Lens.OrthographicSize = Mathf.Lerp(
+            jeepneyCamera.Lens.OrthographicSize,
+            targetSize,
+            Time.deltaTime * lerpSpeed
+        );
     }
 }

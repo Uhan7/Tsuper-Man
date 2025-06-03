@@ -222,12 +222,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumSpeedForTurn: 1.5
-  normalSpeed: 12
-  normalSpeedMax: 40
-  normalTurningSpeed: 200
-  deceleratingSpeed: 12
-  deceleratingSpeedMax: 35
-  friction: 0.98
+  normalSpeed: 9.5
+  normalSpeedMax: 27
+  normalTurningSpeed: 210
+  turningSpeedMax: 20
+  brakeFriction: 0.95
+  deceleratingSpeed: 6.5
+  deceleratingSpeedMax: 13
+  friction: 0.99
   turningFriction: 0.985
   turningDecay: 0.06
   accelerateKey: 119
@@ -236,6 +238,8 @@ MonoBehaviour:
   turnLeftKey: 97
   boostKey: 32
   debugKey: 126
+  accelerateInputTimer: 0
+  decelerateInputTime: 0.5
 --- !u!50 &218295878
 Rigidbody2D:
   serializedVersion: 5
@@ -276,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jeepneyCamera: {fileID: 818664565}
+  jeepneyMoveScript: {fileID: 0}
   minimumLensSize: 7
   maximumLensSize: 11.5
 --- !u!1 &818664563
