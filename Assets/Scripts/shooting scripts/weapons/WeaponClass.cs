@@ -9,7 +9,7 @@ public abstract class WeaponClass : MonoBehaviour
     protected bool holdToShoot;
     protected float shootInterval;
     protected float currentInterval = 0f;
-    protected float bulletSpeed = 15f;
+    protected float bulletSpeed = 40f;
     protected float playerOffset = 0.6f;
     protected float damage;
     protected int maxAmmo;
