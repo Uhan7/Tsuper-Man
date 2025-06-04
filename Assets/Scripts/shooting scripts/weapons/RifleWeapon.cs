@@ -8,7 +8,7 @@ public class RifleWeapon : WeaponClass
         weaponName = "Rifle";
         holdToShoot = true;
         shootInterval = 0.3f;
-        damage = 3f;
+        //damage = 3f;
         maxAmmo = 30;
         currentAmmo = maxAmmo; 
     }

@@ -11,7 +11,7 @@ public abstract class WeaponClass : MonoBehaviour
     protected float currentInterval = 0f;
     protected float bulletSpeed = 40f;
     protected float playerOffset = 0.6f;
-    protected float damage;
+    public float damage;
     protected int maxAmmo;
     protected int currentAmmo;
 

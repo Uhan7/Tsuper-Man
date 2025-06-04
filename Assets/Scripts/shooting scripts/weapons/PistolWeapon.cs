@@ -8,7 +8,7 @@ public class PistolWeapon : WeaponClass
         weaponName = "Pistol";
         holdToShoot = false;
         shootInterval = 0.5f;
-        damage = 5f;
+        //damage = 5f;
         currentAmmo = -69; //ID for infinite ammo, yes
     }
 
