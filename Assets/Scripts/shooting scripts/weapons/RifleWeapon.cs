@@ -5,11 +5,11 @@ public class RifleWeapon : WeaponClass
     protected override void setUpValues()
     {
         ID = 1;
-        weaponName = "Rifle";
-        holdToShoot = true;
-        shootInterval = 0.3f;
+        //weaponName = "Rifle";
+        //holdToShoot = true;
+        //shootInterval = 0.3f;
         //damage = 3f;
-        maxAmmo = 30;
+        //maxAmmo = 30;
         currentAmmo = maxAmmo; 
     }
 

@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -266,7 +266,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d2527eeddb3744cb797cf4dba46048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  weaponName: Minigun
+  holdToShoot: 1
+  shootInterval: 0.1
+  bulletSpeed: 10
+  playerOffset: 0.6
+  damage: 3
+  maxAmmo: 50
 --- !u!1 &230662960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1635,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e83c55d54b06d941a0125b5058c0eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  weaponName: Shotgun
+  holdToShoot: 1
+  shootInterval: 1
+  bulletSpeed: 10
+  playerOffset: 0.6
+  damage: 5
+  maxAmmo: 10
 --- !u!1 &1653362024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1686,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8838802234da3a448a0c9cd087c4d421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  weaponName: Rifle
+  holdToShoot: 1
+  shootInterval: 0.3
+  bulletSpeed: 10
+  playerOffset: 0.6
+  damage: 3
+  maxAmmo: 30
 --- !u!1 &1678570336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,7 +1963,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c11a2eb88ac634b8258af66c2f17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  weaponName: Pistol
+  holdToShoot: 0
+  shootInterval: 0.5
+  bulletSpeed: 10
+  playerOffset: 0.6
+  damage: 5
+  maxAmmo: 0
 --- !u!1 &2086648447
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,14 +5,14 @@ public abstract class WeaponClass : MonoBehaviour
     protected GameObject bulletPrefab;
     protected Transform player;
     protected int ID;
-    protected string weaponName;
-    protected bool holdToShoot;
-    protected float shootInterval;
+    public string weaponName;
+    public bool holdToShoot;
+    public float shootInterval;
     protected float currentInterval = 0f;
-    protected float bulletSpeed = 40f;
-    protected float playerOffset = 0.6f;
+    public float bulletSpeed = 40f;
+    public float playerOffset = 0.6f;
     public float damage;
-    protected int maxAmmo;
+    public int maxAmmo;
     protected int currentAmmo;
 
     public virtual void make(GameObject bulletPrefabRef, Transform playerRef)

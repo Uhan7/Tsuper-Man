@@ -5,9 +5,9 @@ public class PistolWeapon : WeaponClass
     protected override void setUpValues()
     {
         ID = 0;
-        weaponName = "Pistol";
-        holdToShoot = false;
-        shootInterval = 0.5f;
+        //weaponName = "Pistol";
+        //holdToShoot = false;
+        //shootInterval = 0.5f;
         //damage = 5f;
         currentAmmo = -69; //ID for infinite ammo, yes
     }

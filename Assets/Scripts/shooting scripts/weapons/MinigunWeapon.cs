@@ -5,11 +5,11 @@ public class MinigunWeapon : WeaponClass
     protected override void setUpValues()
     {
         ID = 2;
-        weaponName = "Minigun";
-        holdToShoot = true;
-        shootInterval = 0.1f;
-        damage = 2f;
-        maxAmmo = 50;
+        //weaponName = "Minigun";
+        //holdToShoot = true;
+        //shootInterval = 0.1f;
+        //damage = 2f;
+        //maxAmmo = 50;
         currentAmmo = maxAmmo;
     }
     
