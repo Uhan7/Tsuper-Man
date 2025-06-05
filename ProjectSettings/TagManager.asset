@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Enemy
+  - Passenger
+  - Drop Location
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,24 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3573181893
+    locked: 0
+  - name: Jeepney
+    uniqueID: 736716917
+    locked: 0
+  - name: Projectiles
+    uniqueID: 4179821415
+    locked: 0
+  - name: Weapons
+    uniqueID: 2026766671
+    locked: 0
+  - name: People
+    uniqueID: 3710407005
+    locked: 0
+  - name: Locations
+    uniqueID: 16282469
     locked: 0
   m_RenderingLayers:
   - Default
