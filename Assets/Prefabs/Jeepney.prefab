@@ -297,15 +297,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumSpeedForTurn: 1.2
   normalSpeed: 9
-  normalSpeedMax: 23
-  normalTurningSpeed: 180
+  normalSpeedMax: 22.5
+  normalTurningSpeed: 160
   turningSpeedMax: 17
   brakeFriction: 0.95
-  deceleratingSpeed: 4.5
+  deceleratingSpeed: 5.5
   deceleratingSpeedMax: 9.5
   friction: 0.99
   turningFriction: 0.985
-  turningDecay: 0.06
+  turningDecay: 0.04
   accelerateKey: 119
   decelerateKey: 115
   turnRightKey: 100
@@ -313,7 +313,7 @@ MonoBehaviour:
   boostKey: 32
   debugKey: 126
   accelerateInputTimer: 0
-  decelerateInputTime: 0.35
+  decelerateInputTime: 0.25
 --- !u!114 &5762340346052488871
 MonoBehaviour:
   m_ObjectHideFlags: 0

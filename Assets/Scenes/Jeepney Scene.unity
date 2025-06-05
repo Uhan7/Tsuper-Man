@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcef7aea1a0643fdb246ae9b3f70797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 2
+  ID: 1
 --- !u!61 &57707729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -801,8 +801,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97e39ab0584042a18bde3cc678dd63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  dropLocation: {fileID: 1066722082}
+  passengerData:
+    ID: 1
+    name: John Doe
+    pickSound: {fileID: 0}
+    dropSound: {fileID: 0}
 --- !u!1001 &450364666463087368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -858,7 +861,7 @@ PrefabInstance:
     - target: {fileID: 4176328277777745922, guid: f333926fefed34ca290dfbcb6c7b9f13, type: 3}
       propertyPath: passenger
       value: 
-      objectReference: {fileID: 1635612692}
+      objectReference: {fileID: 0}
     - target: {fileID: 5762340346052488871, guid: f333926fefed34ca290dfbcb6c7b9f13, type: 3}
       propertyPath: jeepneyCamera
       value: 
@@ -882,11 +885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1842964115251425126, guid: 1304b3f6aeb334227bc683f28ac258ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1842964115251425126, guid: 1304b3f6aeb334227bc683f28ac258ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 1842964115251425126, guid: 1304b3f6aeb334227bc683f28ac258ff, type: 3}
       propertyPath: m_LocalPosition.z

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PassengerContainer : MonoBehaviour
 {
-    [SerializeField] private Passenger passenger;
+    [SerializeField] private PassengerData passengerData;
 
     private void Update()
     {
@@ -11,21 +11,29 @@ public class PassengerContainer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag != "Drop Location") return;
+        switch (col.gameObject.tag)
+        {
+            case "Passenger":
+                Passenger passenger = col.gameObject.GetComponent<Passenger>();
+                passengerData = passenger.passengerData;
+                Destroy(col.gameObject);
+                break;
 
-        if (passenger.ID == col.gameObject.GetComponent<DropLocation>().ID)
-        {
-            DropPassenger(passenger);
-        }
-        else
-        {
-            Debug.Log("Wrong!");
+            case "Drop Location":
+                if (passengerData != null)
+                {
+                    if (passengerData.ID == col.gameObject.GetComponent<DropLocation>().ID) DropPassenger(passengerData);
+                    else Debug.Log("wrong");
+                }
+                break;
+
+            default: break;
         }
     }
 
     // Update Functions --------------------------------------------------------
 
-    void DropPassenger(Passenger passenger)
+    void DropPassenger(PassengerData passengerData)
     {
         Debug.Log("Success");
     }

@@ -3,6 +3,5 @@ using Unity.Cinemachine;
 
 public class Passenger : MonoBehaviour
 {
-    public int ID;
-    public DropLocation dropLocation;
+    public PassengerData passengerData;
 }
