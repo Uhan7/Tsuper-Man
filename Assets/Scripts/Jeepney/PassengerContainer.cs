@@ -22,7 +22,6 @@ public class PassengerContainer : MonoBehaviour
             Passenger passenger = col.GetComponent<Passenger>();
             passengerQueue.Enqueue(passenger.passengerData);
             Destroy(col.gameObject);
-            UpdateUI();
         }
         else if (col.CompareTag("Drop Location"))
         {
@@ -50,7 +49,6 @@ public class PassengerContainer : MonoBehaviour
             if (passenger.ID == dropID)
             {
                 Debug.Log($"Dropped off passenger: {passenger.ID}");
-                // Event Broadcast this part, I want to use it for game manager to store the data
             }
             else
             {
@@ -63,11 +61,5 @@ public class PassengerContainer : MonoBehaviour
         if (originalCount == passengerQueue.Count)
             Debug.Log("No matching passengers to drop off.");
 
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        // update the queue UI if needed
     }
 }
