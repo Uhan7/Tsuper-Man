@@ -9,13 +9,11 @@ public class EventNames
 {
 
 	// For Jeepney Mode --------------------------------------------------------
-	public const string PICK_PASSENGER_TRUE = "PICK_PASSENGER_TRUE";
-	public const string PICK_PASSENGER_FALSE = "PICK_PASSENGER_FALSE";
-	public const string DROP_PASSENGER_TRUE = "DROP_PASSENGER_TRUE";
-	public const string DROP_PASSENGER_FALSE = "DROP_PASSENGER_FALSE";
+	public const string PICK_PASSENGER = "PICK_PASSENGER";
+	public const string DROP_PASSENGER = "DROP_PASSENGER";
 
 	// For Combat Mode, go fill this eric if you need
-
+	public const string JEEP_DEAD = "JEEP_DEAD";
 
 }
 

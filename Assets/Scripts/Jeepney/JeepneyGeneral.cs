@@ -4,19 +4,23 @@ public class JeepneyGeneral : MonoBehaviour
 {
     [SerializeField] private int HP;
 
-    private void Awake()
-    {
-        //EventBroadcaster.Instance.AddObserver(EventNames.PICK_PASSENGER_TRUE);
-        //EventBroadcaster.Instance.AddObserver(EventNames.DROP_PASSENGER_TRUE);
-        //EventBroadcaster.Instance.AddObserver(EventNames.PICK_PASSENGER_FALSE);
-        //EventBroadcaster.Instance.AddObserver(EventNames.DROP_PASSENGER_FALSE);
-    }
+    private bool isAlive;
 
-    private void OnDestroy()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        EventBroadcaster.Instance.RemoveObserver(EventNames.PICK_PASSENGER_TRUE);
-        EventBroadcaster.Instance.RemoveObserver(EventNames.DROP_PASSENGER_TRUE);
-        EventBroadcaster.Instance.RemoveObserver(EventNames.PICK_PASSENGER_FALSE);
-        EventBroadcaster.Instance.RemoveObserver(EventNames.DROP_PASSENGER_FALSE);
+        switch (col.gameObject.tag)
+        {
+            case "Enemy Bullet":
+                HP -= col.GetComponent<BulletScript>().getDamage();
+                break;
+
+            default:
+                break;
+        }
+
+        if (HP <= 0)
+        {
+            EventBroadcaster.Instance.PostEvent(EventNames.JEEP_DEAD);
+        }
     }
 }

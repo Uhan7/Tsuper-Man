@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    float dmg = 1f;
+    [SerializeField] int dmg = 1;
 
-    public void setDamage(float damage)
+    public void setDamage(int damage)
     {
         dmg = damage;
     }
-    public float getDamage()
+    public int getDamage()
     {
         return dmg;
     }

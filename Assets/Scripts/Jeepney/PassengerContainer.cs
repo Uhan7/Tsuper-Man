@@ -19,6 +19,8 @@ public class PassengerContainer : MonoBehaviour
                 return;
             }
 
+            EventBroadcaster.Instance.PostEvent(EventNames.PICK_PASSENGER);
+
             Passenger passenger = col.GetComponent<Passenger>();
             passengerQueue.Enqueue(passenger.passengerData);
             Destroy(col.gameObject);
@@ -48,6 +50,8 @@ public class PassengerContainer : MonoBehaviour
             PassengerData passenger = passengerQueue.Dequeue();
             if (passenger.ID == dropID)
             {
+                EventBroadcaster.Instance.PostEvent(EventNames.DROP_PASSENGER);
+
                 Debug.Log($"Dropped off passenger: {passenger.ID}");
             }
             else
