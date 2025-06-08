@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 433702633904086331}
   m_Layer: 0
   m_Name: Jeepney
-  m_TagString: Untagged
+  m_TagString: Jeepney
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de5bc90bfe6549a2b7c8797c513fe20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passenger: {fileID: 0}
+  maxPassengers: 0
 --- !u!61 &433702633904086331
 BoxCollider2D:
   m_ObjectHideFlags: 0

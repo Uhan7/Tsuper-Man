@@ -19,11 +19,15 @@ public class PassengerContainer : MonoBehaviour
                 return;
             }
 
-            EventBroadcaster.Instance.PostEvent(EventNames.PICK_PASSENGER);
 
             Passenger passenger = col.GetComponent<Passenger>();
             passengerQueue.Enqueue(passenger.passengerData);
             Destroy(col.gameObject);
+
+            Parameters updateParameters = new Parameters();
+            updateParameters.PutExtra(ParamNames.PASSENGER_ID, passenger.passengerData.ID);
+            EventBroadcaster.Instance.PostEvent(EventNames.PICK_PASSENGER, updateParameters);
+
         }
         else if (col.CompareTag("Drop Location"))
         {
@@ -47,16 +51,18 @@ public class PassengerContainer : MonoBehaviour
 
         while (passengerQueue.Count > 0)
         {
-            PassengerData passenger = passengerQueue.Dequeue();
-            if (passenger.ID == dropID)
+            PassengerData passengerData = passengerQueue.Dequeue();
+            if (passengerData.ID == dropID)
             {
-                EventBroadcaster.Instance.PostEvent(EventNames.DROP_PASSENGER);
+                Parameters updateParameters = new Parameters();
+                updateParameters.PutExtra(ParamNames.PASSENGER_ID, passengerData.ID);
+                EventBroadcaster.Instance.PostEvent(EventNames.DROP_PASSENGER, updateParameters);
 
-                Debug.Log($"Dropped off passenger: {passenger.ID}");
+                Debug.Log($"Dropped off passenger ID: {passengerData.ID}");
             }
             else
             {
-                newQueue.Enqueue(passenger);
+                newQueue.Enqueue(passengerData);
             }
         }
 

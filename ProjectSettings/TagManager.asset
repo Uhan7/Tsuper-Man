@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Passenger
   - Drop Location
+  - Jeepney
   layers:
   - Default
   - TransparentFX
@@ -48,9 +49,6 @@ TagManager:
   - name: Background
     uniqueID: 3573181893
     locked: 0
-  - name: Jeepney
-    uniqueID: 736716917
-    locked: 0
   - name: Projectiles
     uniqueID: 4179821415
     locked: 0
@@ -62,6 +60,9 @@ TagManager:
     locked: 0
   - name: Locations
     uniqueID: 16282469
+    locked: 0
+  - name: Jeepney
+    uniqueID: 736716917
     locked: 0
   m_RenderingLayers:
   - Default

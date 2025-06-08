@@ -7,7 +7,7 @@ using System.Collections;
  */
 public class ParamNames
 {
-	
+	public const string PASSENGER_ID = "PASSENGER_ID";
 }
 
 
