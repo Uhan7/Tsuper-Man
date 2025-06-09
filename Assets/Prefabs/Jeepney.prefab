@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 5762340346052488871}
   - component: {fileID: 4176328277777745922}
   - component: {fileID: 433702633904086331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jeepney
   m_TagString: Jeepney
   m_Icon: {fileID: 0}
