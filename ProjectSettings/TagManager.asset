@@ -49,6 +49,12 @@ TagManager:
   - name: Background
     uniqueID: 3573181893
     locked: 0
+  - name: Floor
+    uniqueID: 551646447
+    locked: 0
+  - name: Buildings
+    uniqueID: 3324363135
+    locked: 0
   - name: Projectiles
     uniqueID: 4179821415
     locked: 0
