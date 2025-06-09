@@ -19,6 +19,17 @@ public class ShooterController : MonoBehaviour
     {
         addWeapons();
         currentWeapon = weaponsList[0];
+
+        EventBroadcaster.Instance.AddObserver(EventNames.WEAPON_PICKUP, this.pickupWeapon);
+    }
+
+    void pickupWeapon(Parameters param)
+    {
+        int id = param.GetIntExtra(ParamNames.WEAPON_PICKUP_ID, 0);
+        if (id == 0)
+            return;
+
+        weaponsList[id].addToCurrentAmmo(weaponsList[id].getMaxAmmo());
     }
 
     void addWeapons()

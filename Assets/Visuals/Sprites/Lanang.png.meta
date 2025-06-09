@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lanang_0: -2187880199613410772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -46,6 +46,16 @@ public abstract class WeaponClass : MonoBehaviour
         return currentAmmo;
     }
 
+    public virtual void addToCurrentAmmo(int moreAmmo)
+    {
+        currentAmmo += moreAmmo;
+    }
+
+    public virtual int getMaxAmmo()
+    {
+        return maxAmmo;
+    }
+
     protected abstract void shootBullet();
     protected abstract void setUpValues();
 }
