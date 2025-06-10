@@ -407,8 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jeepneyCamera: {fileID: 0}
   jeepneyMoveScript: {fileID: 0}
-  minimumLensSize: 7
-  maximumLensSize: 11.5
+  minimumLensSize: 8
+  maximumLensSize: 12
 --- !u!114 &4176328277777745922
 MonoBehaviour:
   m_ObjectHideFlags: 0
