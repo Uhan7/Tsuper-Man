@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f56828f84c5124858a934bd8773efb47
+guid: bf7f804d698aa4ff48de13c7f57a84a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7011661911796687584
-    second: Road_0
+      213: -7650185502783370458
+    second: Blue Background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 90, y: 90, z: 90, w: 90}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Road_0
+      name: Blue Background_0
       rect:
         serializedVersion: 2
         x: 15
-        y: 14
-        width: 8325
-        height: 8325
+        y: 15
+        width: 3181
+        height: 3181
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02dd83ef3a291be90800000000000000
-      internalID: -7011661911796687584
+      spriteID: 62b01c051d415d590800000000000000
+      internalID: -7650185502783370458
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Road_0: -7011661911796687584
+      Blue Background_0: -7650185502783370458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

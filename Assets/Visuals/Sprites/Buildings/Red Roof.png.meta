@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 572d1c847ec9846189e6882309a74065
+guid: 2ee389f5886ad46e0bc44b027987944b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3056575768772425266
-    second: Red Background 1_0
+      213: -2185364668260870569
+    second: Red Roof_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,11 +48,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 50, y: 50, z: 50, w: 50}
+  spriteBorder: {x: 90, y: 90, z: 90, w: 90}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Red Background 1_0
+      name: Red Roof_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 5
-        width: 1287
-        height: 1284
+        x: 12
+        y: 9
+        width: 663
+        height: 663
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec9c041688cd495d0800000000000000
-      internalID: -3056575768772425266
+      spriteID: 7561f9ba9660ca1e0800000000000000
+      internalID: -2185364668260870569
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Red Background 1_0: -3056575768772425266
+      Red Roof_0: -2185364668260870569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
