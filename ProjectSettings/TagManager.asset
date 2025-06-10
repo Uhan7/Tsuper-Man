@@ -16,10 +16,10 @@ TagManager:
   - enemy
   - Water
   - UI
-  - Bullet
+  - Bullet_player
   - Passenger
   - Jeepney
-  - 
+  - Bullet_enemy
   - 
   - 
   - 
