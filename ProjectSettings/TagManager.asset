@@ -9,6 +9,7 @@ TagManager:
   - Passenger
   - Drop Location
   - Jeepney
+  - Building
   layers:
   - Default
   - TransparentFX

@@ -46,8 +46,21 @@ public class PassengerSpawner : MonoBehaviour
         spawnTimers[index] = Random.Range(minimumTime, maximumTime);
     }
 
-    void SpawnPassenger(int passengerIndex, int locationIndex)
+    void SpawnPassenger(int passengerIndex, int transformIndex)
     {
-        Instantiate(passengers[passengerIndex], spawnLocations[locationIndex].position, spawnLocations[locationIndex].rotation);
+        while (transformIndex == passengerIndex)
+        {
+            transformIndex = Random.Range(0, NUMBER_OF_PASSENGERS);
+        }
+
+        Instantiate(passengers[passengerIndex], GetRandomPointInSquare(spawnLocations[transformIndex], 40, 40), transform.rotation);
     }
+
+    public Vector2 GetRandomPointInSquare(Transform center, float width, float height)
+    {
+        float x = Random.Range(center.position.x - width / 2f, center.position.x + width / 2f);
+        float y = Random.Range(center.position.y - height / 2f, center.position.y + height / 2f);
+        return new Vector2(x, y);
+    }
+
 }
