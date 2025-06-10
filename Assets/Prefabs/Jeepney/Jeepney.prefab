@@ -404,10 +404,10 @@ GameObject:
   - component: {fileID: 3908270941045487954}
   - component: {fileID: 4003743058171725986}
   - component: {fileID: 1766918448985233245}
+  - component: {fileID: 433702633904086331}
   - component: {fileID: 1410688928345430226}
   - component: {fileID: 5762340346052488871}
   - component: {fileID: 4176328277777745922}
-  - component: {fileID: 433702633904086331}
   m_Layer: 8
   m_Name: Jeepney
   m_TagString: Jeepney
@@ -514,6 +514,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &433702633904086331
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467250218131570630}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4318182, y: 4.7772727}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.2, y: 4.7}
+  m_EdgeRadius: 0
 --- !u!114 &1410688928345430226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,52 +620,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPassengers: 12
---- !u!61 &433702633904086331
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467250218131570630}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4318182, y: 4.7772727}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.2, y: 4.7}
-  m_EdgeRadius: 0
+  passengerIndicators:
+  - {fileID: 3848537302999956798, guid: 20fd005c9692c4bf8ad9b1d2ff4b7731, type: 3}
+  - {fileID: 2662186585598978221, guid: 79cc61abfc6fd4a29be78fc326adfa42, type: 3}
+  - {fileID: 4131408377258029460, guid: a771c1c0b4d1f449c996c4cefbfdf7e3, type: 3}
+  - {fileID: 4557301431708956482, guid: 68c8171b5318e49c5822ba35d7cc9a2b, type: 3}
+  passengerIndicatorHolder: {fileID: 7771192349412675112}
 --- !u!1 &1893710182306931554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1333,7 @@ RectTransform:
   m_GameObject: {fileID: 7022286314296140216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.15, y: 1.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8645419569325915337}
@@ -1615,7 +1621,7 @@ RectTransform:
   m_GameObject: {fileID: 7771192349412675112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.15, y: 1.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6308594578148061582}
@@ -1646,7 +1652,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 736716917
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &7655746653944352466
 MonoBehaviour:
