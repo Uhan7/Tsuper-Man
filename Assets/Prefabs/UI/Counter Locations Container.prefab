@@ -55,15 +55,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7, g: 0.7, b: 0.7, a: 0.69803923}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 3befac22a28d041818d43c5f8a1c84bd, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -85,12 +85,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 15
+    m_Left: 20
+    m_Right: 20
+    m_Top: 60
+    m_Bottom: 20
+  m_ChildAlignment: 7
+  m_Spacing: 40
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -114,9 +114,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1609074407764819683}
     m_Modifications:
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.023529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.98039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5272940027542622517, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278628858
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7128770747269951495, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
       propertyPath: m_Name
       value: Matina Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128770747269951495, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7145592409750939506, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
       propertyPath: m_Pivot.x
@@ -214,6 +252,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8251069900181461382, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_Name
+      value: Matina Count Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -232,6 +274,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1609074407764819683}
     m_Modifications:
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.2509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5272940027542622517, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283940928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7128770747269951495, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
       propertyPath: m_Name
       value: Lanang Counter
@@ -332,6 +408,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8251069900181461382, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_Name
+      value: Lanang Count Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -350,6 +430,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1609074407764819683}
     m_Modifications:
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.54509807
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.13725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5272940027542622517, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293298979
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7128770747269951495, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
       propertyPath: m_Name
       value: Mintal Counter
@@ -450,6 +564,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8251069900181461382, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_Name
+      value: Mintal Count Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -468,6 +586,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1609074407764819683}
     m_Modifications:
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.98039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5272940027542622517, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283585530
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781964520133885814, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7128770747269951495, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
       propertyPath: m_Name
       value: Obrero Counter
@@ -567,6 +719,10 @@ PrefabInstance:
     - target: {fileID: 7373091993754174101, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251069900181461382, guid: 7041f0a7c1b7746cd83063033a2d2c49, type: 3}
+      propertyPath: m_Name
+      value: Obrero Count Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

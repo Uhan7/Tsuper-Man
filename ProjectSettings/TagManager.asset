@@ -56,6 +56,9 @@ TagManager:
   - name: Buildings
     uniqueID: 3324363135
     locked: 0
+  - name: Locations
+    uniqueID: 16282469
+    locked: 0
   - name: Projectiles
     uniqueID: 4179821415
     locked: 0
@@ -64,9 +67,6 @@ TagManager:
     locked: 0
   - name: People
     uniqueID: 3710407005
-    locked: 0
-  - name: Locations
-    uniqueID: 16282469
     locked: 0
   - name: Jeepney
     uniqueID: 736716917
