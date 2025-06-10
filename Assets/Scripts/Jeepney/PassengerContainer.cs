@@ -61,7 +61,7 @@ public class PassengerContainer : MonoBehaviour
             {
                 foreach (Indicator indicator in passengerIndicatorHolder.GetComponentsInChildren<Indicator>())
                 {
-                    if (dropID == indicator.passengerData.ID) Destroy(indicator);
+                    if (dropID == indicator.passengerData.ID) Destroy(indicator.gameObject);
                 }
 
                 Parameters updateParameters = new Parameters();
