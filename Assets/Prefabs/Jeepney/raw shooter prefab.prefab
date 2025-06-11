@@ -49,8 +49,8 @@ MonoBehaviour:
   holdToShoot: 0
   addPlayerVelocity: 0
   shootInterval: 0.5
-  bulletSpeed: 10
-  playerOffset: 0.6
+  bulletSpeed: 50
+  playerOffset: 1.5
   damage: 5
   maxAmmo: 0
 --- !u!212 &8750942643793112531
@@ -94,9 +94,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 736716917
+  m_SortingLayer: 8
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2727100723513261663, guid: a207a19c381884e939832b79f1f4293f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -157,8 +157,8 @@ MonoBehaviour:
   holdToShoot: 1
   addPlayerVelocity: 0
   shootInterval: 0.2
-  bulletSpeed: 10
-  playerOffset: 0.6
+  bulletSpeed: 50
+  playerOffset: 3
   damage: 3
   maxAmmo: 30
   randomSpreadAngle: 5
@@ -203,9 +203,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 736716917
+  m_SortingLayer: 8
+  m_SortingOrder: 3
   m_Sprite: {fileID: -4827491043400472009, guid: a207a19c381884e939832b79f1f4293f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -266,8 +266,8 @@ MonoBehaviour:
   holdToShoot: 1
   addPlayerVelocity: 0
   shootInterval: 0.1
-  bulletSpeed: 10
-  playerOffset: 0.6
+  bulletSpeed: 50
+  playerOffset: 2.5
   damage: 3
   maxAmmo: 50
   randomSpreadAngle: 15
@@ -312,9 +312,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 736716917
+  m_SortingLayer: 8
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2068600433534596192, guid: a207a19c381884e939832b79f1f4293f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -411,7 +411,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -428,7 +428,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5621343108494377622}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5621343108494377622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03ed02108a88a441cb67e466ce38d200, type: 3}
   m_Name: 
@@ -570,8 +570,8 @@ MonoBehaviour:
   holdToShoot: 0
   addPlayerVelocity: 0
   shootInterval: 1
-  bulletSpeed: 10
-  playerOffset: 0.6
+  bulletSpeed: 50
+  playerOffset: 2.6
   damage: 5
   maxAmmo: 10
   fixedSpreadAngle: 3
@@ -616,9 +616,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 736716917
+  m_SortingLayer: 8
+  m_SortingOrder: 3
   m_Sprite: {fileID: 738874067968954600, guid: a207a19c381884e939832b79f1f4293f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
