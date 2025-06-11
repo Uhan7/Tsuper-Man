@@ -17,15 +17,18 @@ public class HealthPickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isActive || !other.CompareTag("Player"))
-            return;
+        if (other.gameObject.tag == "Jeepney")
+        {
+            Parameters param = new Parameters();
+            param.PutExtra(ParamNames.HEALTH_PICKUP_HEAL, healAmount);
+            EventBroadcaster.Instance.PostEvent(EventNames.HEALTH_PICKUP, param);
 
-        Parameters param = new Parameters();
-        param.PutExtra(ParamNames.HEALTH_PICKUP_HEAL, healAmount);
-        EventBroadcaster.Instance.PostEvent(EventNames.HEALTH_PICKUP, param);
+            healImage.gameObject.SetActive(false);
+            isActive = false;
 
-        healImage.gameObject.SetActive(false);
-        isActive = false;
+            // Jus gon put this here
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

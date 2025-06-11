@@ -17,15 +17,18 @@ public class WeaponPickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isActive || !other.CompareTag("Player"))
-            return;
+        if (other.gameObject.tag == "Jeepney")
+        {
+            Parameters param = new Parameters();
+            param.PutExtra(ParamNames.WEAPON_PICKUP_ID, weaponId);
+            EventBroadcaster.Instance.PostEvent(EventNames.WEAPON_PICKUP, param);
 
-        Parameters param = new Parameters();
-        param.PutExtra(ParamNames.WEAPON_PICKUP_ID, weaponId);
-        EventBroadcaster.Instance.PostEvent(EventNames.WEAPON_PICKUP, param);
+            weaponImage.gameObject.SetActive(false);
+            isActive = false;
 
-        weaponImage.gameObject.SetActive(false);
-        isActive = false;
+            // Jus gon put this here
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

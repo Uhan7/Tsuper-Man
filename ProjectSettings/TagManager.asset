@@ -60,6 +60,9 @@ TagManager:
   - name: Locations
     uniqueID: 16282469
     locked: 0
+  - name: Pickups
+    uniqueID: 4141874737
+    locked: 0
   - name: Projectiles
     uniqueID: 4179821415
     locked: 0

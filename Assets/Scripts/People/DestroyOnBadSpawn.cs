@@ -13,6 +13,7 @@ public class DestroyOnBadSpawn : MonoBehaviour
 
     private void Update()
     {
+        if (timeForCheck < 0) return;
         timeForCheck -= Time.deltaTime;
     }
 
