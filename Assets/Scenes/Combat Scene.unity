@@ -494,7 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Minigun
   holdToShoot: 1
-  addPlayerVelocity: 1
+  addPlayerVelocity: 0
   shootInterval: 0.1
   bulletSpeed: 10
   playerOffset: 0.6

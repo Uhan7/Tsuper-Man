@@ -28,7 +28,7 @@ public abstract class WeaponClass : MonoBehaviour
         if (!addPlayerVelocity)
             return 0f;
 
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>(); // cache this in Start() ideally
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         float speedInDirection = Vector2.Dot(rb.linearVelocity, direction.normalized);
 
         return Mathf.Max(0f, speedInDirection);
