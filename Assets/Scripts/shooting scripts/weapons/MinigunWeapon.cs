@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MinigunWeapon : WeaponClass
 {
+    [SerializeField] float randomSpreadAngle = 15f;
+
     protected override void setUpValues()
     {
         ID = 2;
@@ -23,7 +25,7 @@ public class MinigunWeapon : WeaponClass
         Vector2 direction = mouseWorldPos - player.position;
 
         Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
-        float rand = Random.Range(-15, 15);
+        float rand = Random.Range(-randomSpreadAngle, randomSpreadAngle);
         Vector2 spreadDirection = Quaternion.Euler(0, 0, rand) * direction;
         booletBody.linearVelocity = (bulletSpeed + getPlayerSpeed(direction)) * spreadDirection.normalized;
 
