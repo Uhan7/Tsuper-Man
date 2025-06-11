@@ -494,6 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Minigun
   holdToShoot: 1
+  addPlayerVelocity: 1
   shootInterval: 0.1
   bulletSpeed: 10
   playerOffset: 0.6
@@ -2563,6 +2564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Shotgun
   holdToShoot: 1
+  addPlayerVelocity: 0
   shootInterval: 1
   bulletSpeed: 10
   playerOffset: 0.6
@@ -2614,6 +2616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Rifle
   holdToShoot: 1
+  addPlayerVelocity: 0
   shootInterval: 0.3
   bulletSpeed: 10
   playerOffset: 0.6
@@ -3191,6 +3194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   holdToShoot: 0
+  addPlayerVelocity: 0
   shootInterval: 0.5
   bulletSpeed: 10
   playerOffset: 0.6

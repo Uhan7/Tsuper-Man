@@ -25,14 +25,13 @@ public abstract class WeaponClass : MonoBehaviour
 
     protected virtual float getPlayerSpeed(Vector2 direction)
     {
-        if(!addPlayerVelocity)
+        if (!addPlayerVelocity)
             return 0f;
 
-        float speed = Vector2.Dot(player.GetComponent<Rigidbody2D>().linearVelocity, direction);
-        if(speed > 0)
-            return speed;
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>(); // cache this in Start() ideally
+        float speedInDirection = Vector2.Dot(rb.linearVelocity, direction.normalized);
 
-        return 0f;
+        return Mathf.Max(0f, speedInDirection);
     }
 
     public virtual int getWeaponID()
