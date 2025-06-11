@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ShotgunWeapon : WeaponClass
 {
+    [SerializeField] float fixedSpreadAngle = 3f;
+
     protected override void setUpValues()
     {
         ID = 3;
@@ -26,8 +28,7 @@ public class ShotgunWeapon : WeaponClass
             Vector2 direction = mouseWorldPos - player.position;
 
             Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
-            float fixspread = 3;
-            Vector2 spreadDirection = Quaternion.Euler(0, 0, fixspread * i) * direction;
+            Vector2 spreadDirection = Quaternion.Euler(0, 0, fixedSpreadAngle * i) * direction;
             booletBody.linearVelocity = (bulletSpeed + getPlayerSpeed(direction)) * spreadDirection.normalized;
 
             boolet.transform.position = player.position + (Vector3)(playerOffset * direction.normalized);
