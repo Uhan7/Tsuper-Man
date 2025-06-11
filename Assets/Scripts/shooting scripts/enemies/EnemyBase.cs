@@ -46,6 +46,15 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy Killer")
+        {
+            col.gameObject.GetComponentInParent<Rigidbody2D>().linearVelocity *= 0.7f;
+            Destroy(gameObject);
+        }
+    }
+
     public virtual void shootWeapon()
     {
         float distance = Vector2.Distance(player.position, enemy.position);
