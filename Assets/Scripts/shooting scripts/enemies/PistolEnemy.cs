@@ -9,7 +9,7 @@ public class PistolEnemy : EnemyBase
         Rigidbody2D playerRB = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         Rigidbody2D enemyRB = GetComponent<Rigidbody2D>();
 
-        EnemyPistol pistolWeapon = transform.GetChild(0).GetComponent<EnemyPistol>();
+        EnemyPistol pistolWeapon = transform.GetChild(2).GetComponent<EnemyPistol>();
         pistolWeapon.make(bulletFab, playerRB, transform);
 
         base.make(bulletFab, playerRB, enemyRB, pistolWeapon);

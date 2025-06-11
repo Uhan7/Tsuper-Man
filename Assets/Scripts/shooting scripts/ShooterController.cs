@@ -19,8 +19,16 @@ public class ShooterController : MonoBehaviour
     {
         addWeapons();
         currentWeapon = weaponsList[0];
+        activateWeapon(0);
 
         EventBroadcaster.Instance.AddObserver(EventNames.WEAPON_PICKUP, this.pickupWeapon);
+        EventBroadcaster.Instance.AddObserver(EventNames.HEALTH_PICKUP, this.healPickup);
+    }
+
+    void healPickup(Parameters param)
+    {
+        int healAmount = param.GetIntExtra(ParamNames.HEALTH_PICKUP_HEAL, 0);
+        Hp += healAmount;
     }
 
     void pickupWeapon(Parameters param)
@@ -63,23 +71,36 @@ public class ShooterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) || (currentWeapon.getCurrentAmmo() <= 0 && currentWeapon.getWeaponID() != 0))
         {
             currentWeapon = weaponsList[0];
+            activateWeapon(0);
             SwitchTimer = 0f;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2) && weaponsList[1].getCurrentAmmo() > 0)
         {
             currentWeapon = weaponsList[1];
+            activateWeapon(1);
             SwitchTimer = 0f;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3) && weaponsList[2].getCurrentAmmo() > 0)
         {
             currentWeapon = weaponsList[2];
+            activateWeapon(2);
             SwitchTimer = 0f;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4) && weaponsList[3].getCurrentAmmo() > 0)
         {
             currentWeapon = weaponsList[3];
+            activateWeapon(3);
             SwitchTimer = 0f;
         }
+    }
+
+    void activateWeapon(int index)
+    {
+        for(int i = 0; i < weaponEmpties.Length; i++)
+            if(i != index)
+                weaponEmpties[i].GetComponent<SpriteRenderer>().enabled = false;
+            else
+                weaponEmpties[i].GetComponent<SpriteRenderer>().enabled = true;
     }
 
     // Update is called once per frame

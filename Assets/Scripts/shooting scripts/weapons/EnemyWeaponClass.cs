@@ -23,6 +23,18 @@ public abstract class EnemyWeaponClass : MonoBehaviour
         currentInterval += Time.deltaTime;
         if (currentInterval >= shootInterval)
             shootBullet();
+
+        //rotate weapon
+        Vector2 direction = player.position - (Vector2)enemy.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        Vector3 scale = transform.localScale;
+        if(angle < -90 || angle > 90)
+            scale.y = -1;
+        else 
+            scale.y = 1;
+        transform.localScale = scale;
     }
 
     protected virtual Vector2 GetInterceptDirection() //thx gpt lmao

@@ -15,6 +15,7 @@ public class EventNames
 	// For Combat Mode, go fill this eric if you need
 	public const string JEEP_DEAD = "JEEP_DEAD";
 	public const string WEAPON_PICKUP = "WEAPON_PICKUP";
+	public const string HEALTH_PICKUP = "HEALTH_PICKUP";
 
 }
 

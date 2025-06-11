@@ -9,7 +9,7 @@ public class MinigunEnemy : EnemyBase
         Rigidbody2D playerRB = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         Rigidbody2D enemyRB = GetComponent<Rigidbody2D>();
 
-        EnemyMinigun minigunWeapon = transform.GetChild(0).GetComponent<EnemyMinigun>();
+        EnemyMinigun minigunWeapon = transform.GetChild(2).GetComponent<EnemyMinigun>();
         minigunWeapon.make(bulletFab, playerRB, transform);
 
         base.make(bulletFab, playerRB, enemyRB, minigunWeapon);

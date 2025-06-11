@@ -9,7 +9,7 @@ public class ShotugnEnemy : EnemyBase
         Rigidbody2D playerRB = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         Rigidbody2D enemyRB = GetComponent<Rigidbody2D>();
 
-        EnemyShotgun shotgunWeapon = transform.GetChild(0).GetComponent<EnemyShotgun>();
+        EnemyShotgun shotgunWeapon = transform.GetChild(2).GetComponent<EnemyShotgun>();
         shotgunWeapon.make(bulletFab, playerRB, transform);
 
         base.make(bulletFab, playerRB, enemyRB, shotgunWeapon);

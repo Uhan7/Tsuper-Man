@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8957324059118975939, guid: fd09e0fb37af30f4bac18fd27e620a80, type: 3}
+  m_Sprite: {fileID: -3596705950354237480, guid: b6b88897497454b0f893dfd80729243f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3881615400279003049}
   - component: {fileID: 8078416245292799643}
-  - component: {fileID: 6868141534951979922}
+  - component: {fileID: 1867742946861698449}
   m_Layer: 0
   m_Name: rifle pickup
   m_TagString: Untagged
@@ -136,8 +136,8 @@ MonoBehaviour:
   weaponId: 1
   canRespawn: 0
   respawnTimer: 0
---- !u!61 &6868141534951979922
-BoxCollider2D:
+--- !u!58 &1867742946861698449
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -171,14 +171,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.2, y: 0.5}
-  m_EdgeRadius: 0
+  m_Radius: 0.35
