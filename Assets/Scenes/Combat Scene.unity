@@ -500,6 +500,7 @@ MonoBehaviour:
   playerOffset: 0.6
   damage: 3
   maxAmmo: 50
+  randomSpreadAngle: 15
 --- !u!1 &230662960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,13 +2564,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Shotgun
-  holdToShoot: 1
+  holdToShoot: 0
   addPlayerVelocity: 0
   shootInterval: 1
   bulletSpeed: 10
   playerOffset: 0.6
   damage: 5
   maxAmmo: 10
+  fixedSpreadAngle: 3
 --- !u!1 &1653362024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,11 +2619,12 @@ MonoBehaviour:
   weaponName: Rifle
   holdToShoot: 1
   addPlayerVelocity: 0
-  shootInterval: 0.3
+  shootInterval: 0.2
   bulletSpeed: 10
   playerOffset: 0.6
   damage: 3
   maxAmmo: 30
+  randomSpreadAngle: 5
 --- !u!1 &1678570336
 GameObject:
   m_ObjectHideFlags: 0
