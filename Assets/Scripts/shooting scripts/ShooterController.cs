@@ -117,6 +117,12 @@ public class ShooterController : MonoBehaviour
             Hp -= collision.gameObject.GetComponent<BulletScript>().getDamage();
             Debug.Log("player hp: " + Hp);
         }
+
+        if (Hp <= 0)
+        {
+            EventBroadcaster.Instance.PostEvent(EventNames.JEEP_DEAD);
+            gameObject.SetActive(false);
+        }
     }
 
     public string getCurrentGunName()

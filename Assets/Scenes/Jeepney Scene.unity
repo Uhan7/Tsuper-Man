@@ -1039,8 +1039,14 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  - 0
+  - 0
+  - 0
   passengers:
   - {fileID: 5629614859855741608, guid: 027d671c20eb52849a652eca7562668a, type: 3}
+  - {fileID: 540967463767142664, guid: e3d7d48c18288b046bb4484a36dd85b3, type: 3}
+  - {fileID: 8593692485161114642, guid: f75ad92d6dd91f14c9fcbea9ff00dbad, type: 3}
+  - {fileID: 1743865974621084564, guid: a4c667740006ae9488d75d8da5302c0d, type: 3}
   - {fileID: 540967463767142664, guid: e3d7d48c18288b046bb4484a36dd85b3, type: 3}
   - {fileID: 8593692485161114642, guid: f75ad92d6dd91f14c9fcbea9ff00dbad, type: 3}
   - {fileID: 1743865974621084564, guid: a4c667740006ae9488d75d8da5302c0d, type: 3}
@@ -1627,6 +1633,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e0131fa0f6443e4b3673b5642bfde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 1009440395}
+  - {fileID: 2125412837}
+  - {fileID: 421695318}
   counters:
   - {fileID: 8485681437566947144}
   - {fileID: 8485681437566947143}
@@ -1638,6 +1648,9 @@ MonoBehaviour:
   - {fileID: 8485681437566947138}
   - {fileID: 8485681437566947137}
   counterValues: 00000000000000000000000000000000
+  scoreImage: {fileID: 0}
+  scoreImages: []
+  scoreText: {fileID: 0}
 --- !u!1001 &527158960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7370,7 +7383,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4505687375224372413, guid: f333926fefed34ca290dfbcb6c7b9f13, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

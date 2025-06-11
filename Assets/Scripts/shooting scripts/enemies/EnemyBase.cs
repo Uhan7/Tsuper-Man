@@ -61,4 +61,9 @@ public abstract class EnemyBase : MonoBehaviour
         if(distance >= stopDistance - stopDistanceBuffer && distance < detectionDistance)
             currentWeapon.shoot();
     }
+
+    private void OnDestroy()
+    {
+        if (GetComponent<DestroyOnBadSpawn>().buildingsTouched < 1) EventBroadcaster.Instance.PostEvent(EventNames.KILL_ENEMY);
+    }
 }

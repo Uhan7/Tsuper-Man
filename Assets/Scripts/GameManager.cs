@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -7,12 +8,19 @@ public class GameManager : MonoBehaviour
     private const int NUMBER_OF_LOCATIONS = 4;
 
     // Variables
+    [SerializeField] private GameObject[] spawners;
+
     [SerializeField] private GameObject[] counters;
     [SerializeField] private TextMeshProUGUI[] counterTexts;
 
     [SerializeField] private int[] counterValues;
 
-    private int score;
+    [SerializeField] private Image scoreImage;
+    [SerializeField] private Sprite[] scoreImages;
+    [SerializeField] private TextMeshProUGUI scoreText;
+
+    private int passengersDropped;
+    private int enemiesKilled;
 
     // Functions
     private void Awake()
@@ -21,11 +29,13 @@ public class GameManager : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(EventNames.DROP_PASSENGER, OnDropPassenger);
 
         EventBroadcaster.Instance.AddObserver(EventNames.JEEP_DEAD, OnJeepDead);
+
+        EventBroadcaster.Instance.AddObserver(EventNames.KILL_ENEMY, OnKillEnemy);
     }
 
     private void Start()
     {
-        score = 0;
+        passengersDropped = 0;
 
         for (int i = 0; i < NUMBER_OF_LOCATIONS; i++)
         {
@@ -45,13 +55,24 @@ public class GameManager : MonoBehaviour
         int passengerID = parameters.GetIntExtra(ParamNames.PASSENGER_ID, -1);
         ChangeCounters(passengerID - 1, -1);
 
-        score++;
-        Debug.Log(score);
+        passengersDropped++;
+        Debug.Log(passengersDropped);
     }
 
     void OnJeepDead()
     {
+        foreach (GameObject spawner in spawners)
+        {
+            Destroy(spawner);
+        }
+
         print("RIP");
+    }
+
+    void OnKillEnemy()
+    {
+        enemiesKilled++;
+        Debug.Log(enemiesKilled);
     }
 
     void ChangeCounters(int index, int appendValue)
@@ -64,5 +85,7 @@ public class GameManager : MonoBehaviour
     {
         EventBroadcaster.Instance.RemoveObserver(EventNames.PICK_PASSENGER);
         EventBroadcaster.Instance.RemoveObserver(EventNames.DROP_PASSENGER);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.JEEP_DEAD);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.KILL_ENEMY);
     }
 }

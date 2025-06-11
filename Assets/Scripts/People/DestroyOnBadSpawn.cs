@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DestroyOnBadSpawn : MonoBehaviour
 {
-    private int buildingsTouched;
+    [HideInInspector] public int buildingsTouched; // To be used in EnemyBase to check for the killer
 
     [SerializeField] private float timeForCheck = .2f;
 
@@ -26,13 +26,6 @@ public class DestroyOnBadSpawn : MonoBehaviour
         if (buildingsTouched >= 1) Destroy(gameObject);
     }
 
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (timeForCheck <= 0) return;
-
-        if (col.gameObject.tag == "Building") buildingsTouched--;
-    }
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (timeForCheck <= 0) return;
@@ -40,12 +33,5 @@ public class DestroyOnBadSpawn : MonoBehaviour
         if (col.gameObject.tag == "Building") buildingsTouched++;
 
         if (buildingsTouched >= 1) Destroy(gameObject);
-    }
-
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        if (timeForCheck <= 0) return;
-
-        if (col.gameObject.tag == "Building") buildingsTouched--;
     }
 }

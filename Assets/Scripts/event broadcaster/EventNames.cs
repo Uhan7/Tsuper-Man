@@ -12,10 +12,12 @@ public class EventNames
 	public const string PICK_PASSENGER = "PICK_PASSENGER";
 	public const string DROP_PASSENGER = "DROP_PASSENGER";
 
-	// For Combat Mode, go fill this eric if you need
+	// For Combat Mode ---------------------------------------------------------
 	public const string JEEP_DEAD = "JEEP_DEAD";
 	public const string WEAPON_PICKUP = "WEAPON_PICKUP";
 	public const string HEALTH_PICKUP = "HEALTH_PICKUP";
+
+	public const string KILL_ENEMY = "KILL_ENEMY";
 
 }
 
