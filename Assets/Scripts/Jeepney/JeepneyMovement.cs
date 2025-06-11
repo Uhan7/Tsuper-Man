@@ -116,6 +116,8 @@ public class JeepneyMovement : MonoBehaviour
 
         if (accelerating) accelerateInputTimer += Time.deltaTime;
         else accelerateInputTimer -= Time.deltaTime * 2;
+
+        accelerateInputTimer = Mathf.Clamp(accelerateInputTimer, 0, 4.5f);
     }
 
     // FixedUpdate Functions ---------------------------------------------------

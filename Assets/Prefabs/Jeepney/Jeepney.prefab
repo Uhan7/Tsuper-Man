@@ -1199,7 +1199,7 @@ MonoBehaviour:
   weaponName: Pistol
   holdToShoot: 0
   addPlayerVelocity: 1
-  shootInterval: 0.5
+  shootInterval: 0.2
   bulletSpeed: 40
   playerOffset: 1.5
   damage: 5
