@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 4467815232803282082}
   - component: {fileID: 3307239586679496450}
   - component: {fileID: 3770623522245010706}
+  - component: {fileID: 8334994190950470020}
   m_Layer: 3
   m_Name: rifle enemy
   m_TagString: Enemy
@@ -220,7 +221,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 293e6634a535c40edb6611d2f069e828, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -229,6 +230,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8334994190950470020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090783588701438065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a744433f95de44af6afb08790f64aa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7391916972512668078
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3eff9f153ed9cf48bbf68a1adf1283a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootInterval: 0.3
+  shootInterval: 0.6
   bulletSpeed: 20
   enemyOffset: 1.9
   damage: 1

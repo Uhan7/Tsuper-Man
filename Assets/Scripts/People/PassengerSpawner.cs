@@ -12,6 +12,9 @@ public class PassengerSpawner : MonoBehaviour
     [SerializeField] private float[] spawnTimers;
     [SerializeField] private GameObject[] passengers;
 
+    [SerializeField] private float spawnArea;
+    [SerializeField] private bool disableCertainSpawns;
+
     private void Start()
     {
         SetAllTimers();
@@ -48,12 +51,15 @@ public class PassengerSpawner : MonoBehaviour
 
     void SpawnPassenger(int passengerIndex, int transformIndex)
     {
-        while (transformIndex == passengerIndex)
+        if (disableCertainSpawns)
         {
-            transformIndex = Random.Range(0, NUMBER_OF_PASSENGERS);
+            while (transformIndex == passengerIndex)
+            {
+                transformIndex = Random.Range(0, NUMBER_OF_PASSENGERS);
+            }
         }
 
-        Instantiate(passengers[passengerIndex], GetRandomPointInSquare(spawnLocations[transformIndex], 40, 40), transform.rotation);
+        Instantiate(passengers[passengerIndex], GetRandomPointInSquare(spawnLocations[transformIndex], spawnArea, spawnArea), transform.rotation);
     }
 
     public Vector2 GetRandomPointInSquare(Transform center, float width, float height)

@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 7893820101117160493}
   - component: {fileID: 4301563036195962264}
   - component: {fileID: 3038331098295501010}
+  - component: {fileID: 1799972505666135871}
   m_Layer: 3
   m_Name: pistol enemy
   m_TagString: Enemy
@@ -316,6 +317,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1799972505666135871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955936496266378584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a744433f95de44af6afb08790f64aa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8347313586451077992
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92b0375c1036254498bfbaee099595d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootInterval: 1
+  shootInterval: 0.8
   bulletSpeed: 20
   enemyOffset: 1
   damage: 1

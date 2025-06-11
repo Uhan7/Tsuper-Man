@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2a19072a46664eae2ebb0809bd3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootInterval: 1
+  shootInterval: 2
   bulletSpeed: 20
   enemyOffset: 2
   damage: 1
@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 592974139713632975}
   - component: {fileID: 7514328863232522141}
   - component: {fileID: 6095308966738433147}
+  - component: {fileID: 5829175127291570863}
   m_Layer: 3
   m_Name: shotgun enemy
   m_TagString: Enemy
@@ -333,6 +334,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5829175127291570863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367506253746477113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a744433f95de44af6afb08790f64aa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8540485665777409519
 GameObject:
   m_ObjectHideFlags: 0
