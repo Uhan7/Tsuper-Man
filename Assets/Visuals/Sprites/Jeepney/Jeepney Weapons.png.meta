@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a85a62d7266a14b0fb32166093e8ccc9
+guid: a207a19c381884e939832b79f1f4293f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 718847823688365954
-    second: Pickups_0
+      213: -2727100723513261663
+    second: Jeepney Weapons_0
   - first:
-      213: -3596705950354237480
-    second: Pickups_1
+      213: -4827491043400472009
+    second: Jeepney Weapons_1
   - first:
-      213: 384700277192883564
-    second: Pickups_2
+      213: -2068600433534596192
+    second: Jeepney Weapons_2
   - first:
-      213: 1294334034469808618
-    second: Pickups_3
+      213: 738874067968954600
+    second: Jeepney Weapons_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pickups_0
+      name: Jeepney Weapons_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 463
-        width: 332
-        height: 331
+        x: 78
+        y: 259
+        width: 281
+        height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 287f18a794cd9f900800000000000000
-      internalID: 718847823688365954
+      spriteID: 1a1084c3754672ad0800000000000000
+      internalID: -2727100723513261663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pickups_1
+      name: Jeepney Weapons_1
       rect:
         serializedVersion: 2
-        x: 491
-        y: 454
-        width: 332
-        height: 330
+        x: 544
+        y: 261
+        width: 501
+        height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d71a9b8efee51ec0800000000000000
-      internalID: -3596705950354237480
+      spriteID: 73a2cb1297e410db0800000000000000
+      internalID: -4827491043400472009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pickups_2
+      name: Jeepney Weapons_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 373
-        height: 328
+        x: 13
+        y: 13
+        width: 408
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6d73172ddab65500800000000000000
-      internalID: 384700277192883564
+      spriteID: 0ab83f89ddada43e0800000000000000
+      internalID: -2068600433534596192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pickups_3
+      name: Jeepney Weapons_3
       rect:
         serializedVersion: 2
-        x: 489
-        y: 28
-        width: 363
-        height: 332
+        x: 567
+        y: 39
+        width: 435
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae9654952f566f110800000000000000
-      internalID: 1294334034469808618
+      spriteID: 8e09903dc02014a00800000000000000
+      internalID: 738874067968954600
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e0c228d1915094f94a66103fd7c12afb
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pickups_0: 718847823688365954
-      Pickups_1: -3596705950354237480
-      Pickups_2: 384700277192883564
-      Pickups_3: 1294334034469808618
+      Jeepney Weapons_0: -2727100723513261663
+      Jeepney Weapons_1: -4827491043400472009
+      Jeepney Weapons_2: -2068600433534596192
+      Jeepney Weapons_3: 738874067968954600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
