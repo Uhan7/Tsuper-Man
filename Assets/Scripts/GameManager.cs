@@ -15,9 +15,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int[] counterValues;
 
-    [SerializeField] private Image scoreImage;
-    [SerializeField] private Sprite[] scoreImages;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private GameObject enemiesIcon;
+    [SerializeField] private TextMeshProUGUI enemiesText;
+
+    [SerializeField] private GameObject passengersIcon;
+    [SerializeField] private TextMeshProUGUI passengersText;
 
     private int passengersDropped;
     private int enemiesKilled;
@@ -56,7 +58,9 @@ public class GameManager : MonoBehaviour
         ChangeCounters(passengerID - 1, -1);
 
         passengersDropped++;
-        Debug.Log(passengersDropped);
+        passengersIcon.GetComponent<Animator>().Play("pulse");
+        passengersText.text = passengersDropped.ToString();
+
     }
 
     void OnJeepDead()
@@ -72,12 +76,14 @@ public class GameManager : MonoBehaviour
     void OnKillEnemy()
     {
         enemiesKilled++;
-        Debug.Log(enemiesKilled);
+        enemiesIcon.GetComponent<Animator>().Play("pulse");
+        enemiesText.text = enemiesKilled.ToString();
     }
 
     void ChangeCounters(int index, int appendValue)
     {
         counterValues[index] += appendValue;
+        counters[index].GetComponent<Animator>().Play("pulse");
         counterTexts[index].text = counterValues[index].ToString();
     }
 
