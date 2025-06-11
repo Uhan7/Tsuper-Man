@@ -133,6 +133,7 @@ MonoBehaviour:
   Hp: 20
   movementSpeed: 2
   stopDistance: 5
+  detectionDistance: 15
   bulletFab: {fileID: 1550093766563824525, guid: 83908aaeca132c2478c7ddd313120ac8, type: 3}
 --- !u!58 &1221625875893178710
 CircleCollider2D:
