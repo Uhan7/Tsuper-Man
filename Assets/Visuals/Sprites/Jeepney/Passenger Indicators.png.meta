@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Passenger Indicators_0: -4021145549369599195
+      Passenger Indicators_1: 5378634026379491959
+      Passenger Indicators_2: -5116919687738078912
+      Passenger Indicators_3: 2485457952744490475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

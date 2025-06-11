@@ -25,7 +25,7 @@ public class MinigunWeapon : WeaponClass
         Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
         float rand = Random.Range(-15, 15);
         Vector2 spreadDirection = Quaternion.Euler(0, 0, rand) * direction;
-        booletBody.linearVelocity = bulletSpeed * spreadDirection.normalized;
+        booletBody.linearVelocity = (bulletSpeed + getPlayerSpeed(direction)) * spreadDirection.normalized;
 
         boolet.transform.position = player.position + (Vector3)(playerOffset * direction.normalized);
 

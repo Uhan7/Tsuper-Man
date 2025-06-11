@@ -22,7 +22,7 @@ public class PistolWeapon : WeaponClass
         Vector2 direction = mouseWorldPos - player.position;
 
         Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
-        booletBody.linearVelocity = bulletSpeed * direction.normalized;
+        booletBody.linearVelocity = (bulletSpeed + getPlayerSpeed(direction)) * direction.normalized;
 
         boolet.transform.position = player.position + (Vector3)(playerOffset * direction.normalized);
 

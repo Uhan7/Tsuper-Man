@@ -28,7 +28,7 @@ public class ShotgunWeapon : WeaponClass
             Rigidbody2D booletBody = boolet.GetComponent<Rigidbody2D>();
             float fixspread = 3;
             Vector2 spreadDirection = Quaternion.Euler(0, 0, fixspread * i) * direction;
-            booletBody.linearVelocity = bulletSpeed * spreadDirection.normalized;
+            booletBody.linearVelocity = (bulletSpeed + getPlayerSpeed(direction)) * spreadDirection.normalized;
 
             boolet.transform.position = player.position + (Vector3)(playerOffset * direction.normalized);
 
