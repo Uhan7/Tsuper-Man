@@ -6,7 +6,11 @@ public class PistolEnemy : EnemyBase
 
     void Awake()
     {
-        Rigidbody2D playerRB = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        Rigidbody2D playerRB = GameObject.FindWithTag("Jeepney").GetComponent<Rigidbody2D>();
+
+        // Just to prevent nullrefernce
+        if (playerRB == null) playerRB = GetComponent<Rigidbody2D>();
+
         Rigidbody2D enemyRB = GetComponent<Rigidbody2D>();
 
         EnemyPistol pistolWeapon = transform.GetChild(2).GetComponent<EnemyPistol>();
