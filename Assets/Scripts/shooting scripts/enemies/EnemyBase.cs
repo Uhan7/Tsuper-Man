@@ -10,6 +10,7 @@ public abstract class EnemyBase : MonoBehaviour
     public int Hp = 20;
     public float movementSpeed;
     public float stopDistance;
+    public float stopDistanceBuffer;
     public float detectionDistance;
 
     public virtual void make(GameObject bulletPrefabRef, Rigidbody2D playerRB, Rigidbody2D enemyRB, EnemyWeaponClass currentWeaponRef)
@@ -27,6 +28,8 @@ public abstract class EnemyBase : MonoBehaviour
         float distance = Vector2.Distance(player.position, enemy.position);
         if (distance > stopDistance && distance < detectionDistance)
             enemy.linearVelocity = direction.normalized * movementSpeed;
+        else if(distance < stopDistance - stopDistanceBuffer && distance < detectionDistance)
+            enemy.linearVelocity = direction.normalized * -movementSpeed;
         else
             enemy.linearVelocity = Vector2.zero;
     }
@@ -45,6 +48,8 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void shootWeapon()
     {
-        currentWeapon.shoot();
+        float distance = Vector2.Distance(player.position, enemy.position);
+        if(distance >= stopDistance - stopDistanceBuffer && distance < detectionDistance)
+            currentWeapon.shoot();
     }
 }
