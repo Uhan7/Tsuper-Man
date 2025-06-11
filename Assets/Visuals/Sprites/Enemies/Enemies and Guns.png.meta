@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 0f7fd0bb3489648a89a48dff6292fc8e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2108790268295526664
+    second: Enemies and Guns_0
+  - first:
+      213: 3074550574656990633
+    second: Enemies and Guns_1
+  - first:
+      213: 1481840780350942000
+    second: Enemies and Guns_2
+  - first:
+      213: -2179136893234717939
+    second: Enemies and Guns_3
+  - first:
+      213: 1008963226622498588
+    second: Enemies and Guns_4
+  - first:
+      213: 2036728089647299059
+    second: Enemies and Guns_5
+  - first:
+      213: -6732941182032232432
+    second: Enemies and Guns_6
+  - first:
+      213: 2921058862376288460
+    second: Enemies and Guns_7
+  - first:
+      213: 3042357716059006835
+    second: Enemies and Guns_8
+  - first:
+      213: -516503040775771843
+    second: Enemies and Guns_9
+  - first:
+      213: 7602451322141199371
+    second: Enemies and Guns_10
+  - first:
+      213: 4396405244184937943
+    second: Enemies and Guns_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 360
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemies and Guns_0
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 2854
+        width: 679
+        height: 222
+      alignment: 9
+      pivot: {x: 0.07070604, y: 0.25380728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8093e8f739de34d10800000000000000
+      internalID: 2108790268295526664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_1
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 2902
+        width: 999
+        height: 227
+      alignment: 9
+      pivot: {x: 0.06232624, y: 0.2391664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad276e357ffaaa20800000000000000
+      internalID: 3074550574656990633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_2
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 2194
+        width: 455
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b618ea65e809410800000000000000
+      internalID: 1481840780350942000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_3
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 2180
+        width: 667
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0bdbc98a8622c1e0800000000000000
+      internalID: -2179136893234717939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_4
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1679
+        width: 355
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c17144a75be800e00800000000000000
+      internalID: 1008963226622498588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_5
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1671
+        width: 454
+        height: 492
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9bc7f0869e34c10800000000000000
+      internalID: 2036728089647299059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1232
+        width: 1258
+        height: 299
+      alignment: 9
+      pivot: {x: 0.051062632, y: 0.6523254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010ce57eaa9cf82a0800000000000000
+      internalID: -6732941182032232432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_7
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 1350
+        width: 1105
+        height: 211
+      alignment: 9
+      pivot: {x: 0.050728444, y: 0.41365752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc002f31f8fa98820800000000000000
+      internalID: 2921058862376288460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_8
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 623
+        width: 555
+        height: 541
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377ad514930a83a20800000000000000
+      internalID: 3042357716059006835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_9
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 654
+        width: 610
+        height: 694
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39a621983305d8f0800000000000000
+      internalID: -516503040775771843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_10
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 118
+        width: 588
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ccc6ea235518960800000000000000
+      internalID: 7602451322141199371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies and Guns_11
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 10
+        width: 536
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5ce44c64b230d30800000000000000
+      internalID: 4396405244184937943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8cdecb1db5d0b48068e49bce35ed42b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemies and Guns_0: 2108790268295526664
+      Enemies and Guns_1: 3074550574656990633
+      Enemies and Guns_10: 7602451322141199371
+      Enemies and Guns_11: 4396405244184937943
+      Enemies and Guns_2: 1481840780350942000
+      Enemies and Guns_3: -2179136893234717939
+      Enemies and Guns_4: 1008963226622498588
+      Enemies and Guns_5: 2036728089647299059
+      Enemies and Guns_6: -6732941182032232432
+      Enemies and Guns_7: 2921058862376288460
+      Enemies and Guns_8: 3042357716059006835
+      Enemies and Guns_9: -516503040775771843
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
