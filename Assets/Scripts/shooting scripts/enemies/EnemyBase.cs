@@ -50,7 +50,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy Killer")
         {
-            col.gameObject.GetComponentInParent<Rigidbody2D>().linearVelocity *= 0.7f;
+            col.gameObject.GetComponentInParent<Rigidbody2D>().linearVelocity *= 0.9f;
             Destroy(gameObject);
         }
     }

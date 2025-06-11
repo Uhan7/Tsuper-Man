@@ -115,7 +115,7 @@ public class JeepneyMovement : MonoBehaviour
         else decelerateInputTimer = 0;
 
         if (accelerating) accelerateInputTimer += Time.deltaTime;
-        else accelerateInputTimer = 0;
+        else accelerateInputTimer -= Time.deltaTime * 2;
     }
 
     // FixedUpdate Functions ---------------------------------------------------
