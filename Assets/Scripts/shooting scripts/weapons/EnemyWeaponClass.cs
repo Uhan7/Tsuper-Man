@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class EnemyWeaponClass : MonoBehaviour
 {
+    public AudioClip shootSFX;
     protected GameObject bulletPrefab;
     protected Rigidbody2D player;
     protected Transform enemy;
@@ -22,7 +23,10 @@ public abstract class EnemyWeaponClass : MonoBehaviour
     {
         currentInterval += Time.deltaTime;
         if (currentInterval >= shootInterval)
+        {
             shootBullet();
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(shootSFX);
+        }
 
         //rotate weapon
         Vector2 direction = player.position - (Vector2)enemy.position;

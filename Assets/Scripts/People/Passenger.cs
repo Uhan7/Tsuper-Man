@@ -7,6 +7,10 @@ public class Passenger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Bullet") Destroy(gameObject);
+        if (col.gameObject.tag == "Bullet")
+        {
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(passengerData.deadSound);
+            Destroy(gameObject);
+        }
     }
 }

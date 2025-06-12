@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class WeaponClass : MonoBehaviour
 {
+    public AudioClip shootSFX;
+
     protected GameObject bulletPrefab;
     protected Transform player;
     protected int ID;
@@ -43,9 +45,15 @@ public abstract class WeaponClass : MonoBehaviour
     {
         currentInterval += Time.deltaTime;
         if (holdToShoot && Input.GetMouseButton(0) && currentInterval >= shootInterval && (currentAmmo == -69 || currentAmmo > 0))
+        {
             shootBullet();
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(shootSFX);
+        }
         else if (!holdToShoot && Input.GetMouseButtonDown(0) && currentInterval >= shootInterval && (currentAmmo == -69 || currentAmmo > 0))
+        {
             shootBullet();
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(shootSFX);
+        }
 
         //rotate weapon
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

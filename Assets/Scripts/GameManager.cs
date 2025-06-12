@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour
     // Constants
     private const int NUMBER_OF_LOCATIONS = 4;
 
+    // Audio
+    [SerializeField] private AudioSource sfxSource;
+
+    [SerializeField] private AudioClip jeepHurtSFX;
+    [SerializeField] private AudioClip jeepDeadSFX;
+    [SerializeField] private AudioClip personDeadSFX;
+
     // Other GameObjects
     [SerializeField] private GameObject mainCam;
     [SerializeField] private GameObject jeepney;
@@ -90,6 +97,7 @@ public class GameManager : MonoBehaviour
     void OnJeepHurt()
     {
         mainCam.GetComponent<camera_shake>().ScreenShakeWrapper();
+        sfxSource.PlayOneShot(jeepHurtSFX);
     }
 
     void OnJeepDead()
@@ -100,6 +108,7 @@ public class GameManager : MonoBehaviour
         }
 
         deathMenu.SetActive(true);
+        sfxSource.PlayOneShot(jeepDeadSFX);
     }
 
     void OnKillEnemy()
@@ -107,6 +116,8 @@ public class GameManager : MonoBehaviour
         enemiesKilled++;
         enemiesIcon.GetComponent<Animator>().Play("pulse");
         enemiesText.text = enemiesKilled.ToString();
+
+        sfxSource.PlayOneShot(personDeadSFX);
     }
 
     void ChangeCounters(int index, int appendValue)

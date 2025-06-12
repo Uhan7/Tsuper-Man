@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -584560291
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: -516503040775771843, guid: 0f7fd0bb3489648a89a48dff6292fc8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2a19072a46664eae2ebb0809bd3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootSFX: {fileID: 8300000, guid: 2d2183f78b214524eabbb975cc68faa2, type: 3}
   shootInterval: 2
   bulletSpeed: 20
   enemyOffset: 2
@@ -178,7 +179,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -584560291
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 2
   m_Sprite: {fileID: 2921058862376288460, guid: 0f7fd0bb3489648a89a48dff6292fc8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -346,6 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a744433f95de44af6afb08790f64aa32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingsTouched: 0
+  timeForCheck: 0.2
 --- !u!1 &8540485665777409519
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +423,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -584560291
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 4396405244184937943, guid: 0f7fd0bb3489648a89a48dff6292fc8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

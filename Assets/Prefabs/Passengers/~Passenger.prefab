@@ -180,6 +180,7 @@ MonoBehaviour:
     name: asdfsf
     pickSound: {fileID: 0}
     dropSound: {fileID: 0}
+    deadSound: {fileID: 8300000, guid: e7c775066e3a844ba8b3d2e10a086c12, type: 3}
 --- !u!95 &3340447499654221779
 Animator:
   serializedVersion: 7
@@ -241,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a744433f95de44af6afb08790f64aa32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingsTouched: 0
+  timeForCheck: 0.2
 --- !u!1 &2718635751604689160
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +318,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -584560291
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: 4709074240616245994, guid: ff9bd295d39884465882495113bec5e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -402,7 +405,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -584560291
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 1929977772035126511, guid: ff9bd295d39884465882495113bec5e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

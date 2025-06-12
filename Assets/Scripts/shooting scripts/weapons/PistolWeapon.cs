@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PistolWeapon : WeaponClass
 {
+
     protected override void setUpValues()
     {
         ID = 0;
@@ -14,6 +15,7 @@ public class PistolWeapon : WeaponClass
 
     protected override void shootBullet()
     {
+
         currentInterval = 0f;
         GameObject boolet = Instantiate(bulletPrefab); //maybe switch to pool
 

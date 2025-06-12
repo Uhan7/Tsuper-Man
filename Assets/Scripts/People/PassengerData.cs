@@ -8,4 +8,5 @@ public class PassengerData
     public string name;
     public AudioClip pickSound;
     public AudioClip dropSound;
+    public AudioClip deadSound;
 }
