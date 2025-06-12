@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3963463292263477129}
   - component: {fileID: 6013893077824821852}
   - component: {fileID: 1420143478488035168}
+  - component: {fileID: 3198717275404332833}
   m_Layer: 0
   m_Name: Red Building
   m_TagString: Building
@@ -135,6 +136,59 @@ BoxCollider2D:
   m_AutoTiling: 1
   m_Size: {x: 6.5, y: 6.5}
   m_EdgeRadius: 0
+--- !u!114 &3198717275404332833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834287736463656002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 00000000c56dfad4ef74e1207fc125c66573f80031fedff6670323f94f01ce785d5128dd7568e92b
+  m_ShapePath:
+  - {x: -4, y: -4, z: 0}
+  - {x: -4, y: 4, z: 0}
+  - {x: 4, y: 4, z: 0}
+  - {x: 4, y: -4, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 6013893077824821852}
+  m_ShadowShape2DProvider:
+    rid: 2241773644170133646
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 3.600006, y: 3.600006, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.4
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.4
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0
+  m_PreviousEdgeProcessing: -1
+  m_PreviousShadowCastingSource: -1
+  m_PreviousShadowShape2DSource: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 2241773644170133646
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!1 &6037360815180618931
 GameObject:
   m_ObjectHideFlags: 0
