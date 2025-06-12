@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class WeaponPickup : MonoBehaviour
 {
+    [SerializeField] private AudioClip pickupSFX;
+
     [SerializeField] int weaponId = 0;
     [SerializeField] bool canRespawn = false;
     [SerializeField] float respawnTimer = 0f;
@@ -25,6 +27,8 @@ public class WeaponPickup : MonoBehaviour
 
             weaponImage.gameObject.SetActive(false);
             isActive = false;
+
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(pickupSFX);
 
             // Jus gon put this here
             Destroy(gameObject);

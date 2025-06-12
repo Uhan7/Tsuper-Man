@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class HealthPickup : MonoBehaviour
 {
+    [SerializeField] private AudioClip pickupSFX;
+
     [SerializeField] int healAmount = 50;
     [SerializeField] bool canRespawn = false;
     [SerializeField] float respawnTimer = 0f;
@@ -25,6 +27,8 @@ public class HealthPickup : MonoBehaviour
 
             healImage.gameObject.SetActive(false);
             isActive = false;
+
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(pickupSFX);
 
             // Jus gon put this here
             Destroy(gameObject);

@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     // Audio
     [SerializeField] private AudioSource sfxSource;
 
+    [SerializeField] private AudioClip pickPassengerSFX;
+    [SerializeField] private AudioClip dropPassengerSFX;
+
+    [SerializeField] private AudioClip[] pickPassengerVoiceSFXs;
+    [SerializeField] private AudioClip[] dropPassengerVoiceSFXs;
+
     [SerializeField] private AudioClip jeepHurtSFX;
     [SerializeField] private AudioClip jeepDeadSFX;
     [SerializeField] private AudioClip personDeadSFX;
@@ -81,6 +87,10 @@ public class GameManager : MonoBehaviour
     {
         int passengerID = parameters.GetIntExtra(ParamNames.PASSENGER_ID, -1);
         ChangeCounters(passengerID - 1, 1);
+
+        sfxSource.PlayOneShot(pickPassengerSFX);
+
+        sfxSource.PlayOneShot(pickPassengerVoiceSFXs[Random.Range(0, pickPassengerVoiceSFXs.Length-1)]);
     }
 
     void OnDropPassenger(Parameters parameters)
@@ -92,6 +102,9 @@ public class GameManager : MonoBehaviour
         passengersIcon.GetComponent<Animator>().Play("pulse");
         passengersText.text = passengersDropped.ToString();
 
+        sfxSource.PlayOneShot(dropPassengerSFX);
+
+        sfxSource.PlayOneShot(dropPassengerVoiceSFXs[Random.Range(0, dropPassengerVoiceSFXs.Length-1)]);
     }
 
     void OnJeepHurt()
@@ -117,7 +130,7 @@ public class GameManager : MonoBehaviour
         enemiesIcon.GetComponent<Animator>().Play("pulse");
         enemiesText.text = enemiesKilled.ToString();
 
-        sfxSource.PlayOneShot(personDeadSFX);
+        if (sfxSource != null) sfxSource.PlayOneShot(personDeadSFX);
     }
 
     void ChangeCounters(int index, int appendValue)

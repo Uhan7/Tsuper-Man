@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4082cf7178c434eb912d104b91e996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitByBulletSFX: {fileID: 8300000, guid: aef362f6b652374439dd35f5ebf39a16, type: 3}
   Hp: 20
   movementSpeed: 2
   stopDistance: 5

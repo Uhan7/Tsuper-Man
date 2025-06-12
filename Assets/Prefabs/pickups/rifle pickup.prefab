@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704e43cbef9752a48bc1ac4a884b43f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSFX: {fileID: 8300000, guid: ebb67b3dc676a5047a06390774df57fc, type: 3}
   weaponId: 1
   canRespawn: 0
   respawnTimer: 0
@@ -209,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a744433f95de44af6afb08790f64aa32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingsTouched: 0
   timeForCheck: 0.2
 --- !u!50 &6539786325501993785
 Rigidbody2D:

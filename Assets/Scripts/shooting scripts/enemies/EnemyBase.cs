@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
+    public AudioClip hitByBulletSFX;
+
     protected GameObject bulletPrefab;
     protected Rigidbody2D player;
     protected Rigidbody2D enemy;
@@ -40,6 +42,8 @@ public abstract class EnemyBase : MonoBehaviour
         {
             Hp -= collision.gameObject.GetComponent<BulletScript>().getDamage();
             //Debug.Log("enemy hp: " + Hp);
+
+            GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(hitByBulletSFX);
 
             if (Hp <= 0)
                 Destroy(gameObject);
