@@ -8,7 +8,7 @@ public class AmmoCountScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        shooterController = GameObject.FindWithTag("Player").GetComponent<ShooterController>();
+        shooterController = GameObject.FindWithTag("Jeepney").GetComponent<ShooterController>();
         ammo = gameObject.GetComponent<TextMeshProUGUI>();
     }
 

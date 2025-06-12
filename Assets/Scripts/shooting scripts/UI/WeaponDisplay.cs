@@ -12,7 +12,7 @@ public class WeaponDisplay : MonoBehaviour
     {
         gunImage = transform.GetComponent<Image>();
 
-        Transform player = GameObject.FindWithTag("Player").transform;
+        Transform player = GameObject.FindWithTag("Jeepney").transform;
         foreach (Transform obj in player)
             if (obj.GetComponent<RifleWeapon>() != null && weaponIndex == 1)
             {
