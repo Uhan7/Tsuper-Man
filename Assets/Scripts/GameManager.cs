@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject jeepney;
     private ShooterController jeepneyShooterScript;
 
+    [SerializeField] private GameObject deathMenu;
+
     // Spawning
     [SerializeField] private GameObject[] spawners;
 
@@ -51,6 +53,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        deathMenu.SetActive(false);
+
         passengersDropped = 0;
 
         for (int i = 0; i < NUMBER_OF_LOCATIONS; i++)
@@ -95,7 +99,7 @@ public class GameManager : MonoBehaviour
             Destroy(spawner);
         }
 
-        print("RIP");
+        deathMenu.SetActive(true);
     }
 
     void OnKillEnemy()
