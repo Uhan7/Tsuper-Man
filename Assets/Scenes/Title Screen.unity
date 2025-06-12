@@ -2745,19 +2745,20 @@ MonoBehaviour:
 
 
     Recent
-    outbreaks of SOGO (Supporters of Ovada''s Gruesomeness) attacks have been prevalent
-    throughout the city.
+    outbreaks of SOGO (Supporters of Ovada''s Gruesomeness Organization) attacks
+    have been prevalent throughout the city.
 
 
-    As you return to your hometown, it is your duty to
-    make sure the people of Ovada City feel at home.
+    As you return to your hometown,
+    it is your duty to make sure the people of Ovada City feel at home.
 
 
-    Deliver them home and
-    defeat the SOGO organization''s enemies!
+    Drop
+    the civilians home and defeat the SOGO-affiliated enemies!
 
 
-    (Click the Title to begin)'
+    (Click the Title
+    to begin)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
   m_sharedMaterial: {fileID: 5272940027542622517, guid: cd28ad9a23b9440e2b4c21f08d098d6a, type: 2}
