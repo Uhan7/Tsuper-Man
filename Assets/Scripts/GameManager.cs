@@ -120,6 +120,19 @@ public class GameManager : MonoBehaviour
             Destroy(spawner);
         }
 
+        GameObject[] passengers = GameObject.FindGameObjectsWithTag("Passenger");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+
+        foreach (GameObject passenger in passengers)
+        {
+            Destroy(passenger);
+        }
+
         deathMenu.SetActive(true);
         sfxSource.PlayOneShot(jeepDeadSFX);
     }
@@ -127,7 +140,7 @@ public class GameManager : MonoBehaviour
     void OnKillEnemy()
     {
         enemiesKilled++;
-        enemiesIcon.GetComponent<Animator>().Play("pulse");
+        if (enemiesIcon != null) enemiesIcon.GetComponent<Animator>().Play("pulse");
         enemiesText.text = enemiesKilled.ToString();
 
         if (sfxSource != null) sfxSource.PlayOneShot(personDeadSFX);
