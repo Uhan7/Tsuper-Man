@@ -5,7 +5,7 @@ public class ShooterController : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] GameObject[] weaponEmpties;
-    [SerializeField] float Hp = 100f;
+    public float Hp = 100f;
     [SerializeField] float weaponSwitchCooldown = 1f;
 
     //0 - pistol, 1 - rifle, 2 - minigun, 3 - shotgun
@@ -117,7 +117,8 @@ public class ShooterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Hp -= collision.gameObject.GetComponent<BulletScript>().getDamage();
-            Debug.Log("player hp: " + Hp);
+
+            EventBroadcaster.Instance.PostEvent(EventNames.JEEP_HURT);
         }
 
         if (Hp <= 0)

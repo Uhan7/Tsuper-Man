@@ -8,11 +8,17 @@ public class GameManager : MonoBehaviour
     private const int NUMBER_OF_LOCATIONS = 4;
 
     // Variables
+    [SerializeField] private GameObject mainCam;
+
+    // Spawning
     [SerializeField] private GameObject[] spawners;
 
+    // Top Section
+    [SerializeField] private GameObject hpSection;
+
+    // Bottom Right
     [SerializeField] private GameObject[] counters;
     [SerializeField] private TextMeshProUGUI[] counterTexts;
-
     [SerializeField] private int[] counterValues;
 
     [SerializeField] private GameObject enemiesIcon;
@@ -30,6 +36,7 @@ public class GameManager : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(EventNames.PICK_PASSENGER, OnPickPassenger);
         EventBroadcaster.Instance.AddObserver(EventNames.DROP_PASSENGER, OnDropPassenger);
 
+        EventBroadcaster.Instance.AddObserver(EventNames.JEEP_HURT, OnJeepHurt);
         EventBroadcaster.Instance.AddObserver(EventNames.JEEP_DEAD, OnJeepDead);
 
         EventBroadcaster.Instance.AddObserver(EventNames.KILL_ENEMY, OnKillEnemy);
@@ -63,6 +70,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    void OnJeepHurt()
+    {
+        mainCam.GetComponent<camera_shake>().ScreenShakeWrapper();
+    }
+
     void OnJeepDead()
     {
         foreach (GameObject spawner in spawners)
@@ -91,6 +103,7 @@ public class GameManager : MonoBehaviour
     {
         EventBroadcaster.Instance.RemoveObserver(EventNames.PICK_PASSENGER);
         EventBroadcaster.Instance.RemoveObserver(EventNames.DROP_PASSENGER);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.JEEP_HURT);
         EventBroadcaster.Instance.RemoveObserver(EventNames.JEEP_DEAD);
         EventBroadcaster.Instance.RemoveObserver(EventNames.KILL_ENEMY);
     }

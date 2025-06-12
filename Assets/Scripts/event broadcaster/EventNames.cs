@@ -13,6 +13,7 @@ public class EventNames
 	public const string DROP_PASSENGER = "DROP_PASSENGER";
 
 	// For Combat Mode ---------------------------------------------------------
+	public const string JEEP_HURT = "JEEP_HURT";
 	public const string JEEP_DEAD = "JEEP_DEAD";
 	public const string WEAPON_PICKUP = "WEAPON_PICKUP";
 	public const string HEALTH_PICKUP = "HEALTH_PICKUP";
