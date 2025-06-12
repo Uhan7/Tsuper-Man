@@ -7,14 +7,17 @@ public class GameManager : MonoBehaviour
     // Constants
     private const int NUMBER_OF_LOCATIONS = 4;
 
-    // Variables
+    // Other GameObjects
     [SerializeField] private GameObject mainCam;
+    [SerializeField] private GameObject jeepney;
+    private ShooterController jeepneyShooterScript;
 
     // Spawning
     [SerializeField] private GameObject[] spawners;
 
     // Top Section
-    [SerializeField] private GameObject hpSection;
+    [SerializeField] private Image hpFill;
+    [SerializeField] private TextMeshProUGUI hpPercentText;
 
     // Bottom Right
     [SerializeField] private GameObject[] counters;
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     // Functions
     private void Awake()
     {
+        // Broadcasting
         EventBroadcaster.Instance.AddObserver(EventNames.PICK_PASSENGER, OnPickPassenger);
         EventBroadcaster.Instance.AddObserver(EventNames.DROP_PASSENGER, OnDropPassenger);
 
@@ -40,6 +44,9 @@ public class GameManager : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(EventNames.JEEP_DEAD, OnJeepDead);
 
         EventBroadcaster.Instance.AddObserver(EventNames.KILL_ENEMY, OnKillEnemy);
+
+        // Component Initialization
+        jeepneyShooterScript = jeepney.GetComponent<ShooterController>();
     }
 
     private void Start()
@@ -51,6 +58,12 @@ public class GameManager : MonoBehaviour
             counterTexts[i].text = "0";
             //counterValues[i] = 0;
         }
+    }
+
+    private void Update()
+    {
+        hpFill.fillAmount = jeepneyShooterScript.Hp / 100f;
+        hpPercentText.text = jeepneyShooterScript.Hp.ToString() + "%";
     }
 
     void OnPickPassenger(Parameters parameters)

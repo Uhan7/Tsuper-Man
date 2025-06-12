@@ -1731,11 +1731,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 893444645}
+  jeepney: {fileID: 1328107645}
   spawners:
   - {fileID: 1009440395}
   - {fileID: 2125412837}
   - {fileID: 421695318}
-  hpSection: {fileID: 0}
+  hpFill: {fileID: 1612939007}
+  hpPercentText: {fileID: 1326449331}
   counters:
   - {fileID: 8485681437566947144}
   - {fileID: 8485681437566947143}
@@ -5003,6 +5005,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326449329}
   m_CullTransparentMesh: 1
+--- !u!1 &1328107645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467250218131570630, guid: f333926fefed34ca290dfbcb6c7b9f13, type: 3}
+  m_PrefabInstance: {fileID: 450364666463087368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1331030374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5426,7 +5433,7 @@ GameObject:
   - component: {fileID: 1468135158}
   - component: {fileID: 1468135157}
   m_Layer: 5
-  m_Name: Jeep HP
+  m_Name: HP Section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
