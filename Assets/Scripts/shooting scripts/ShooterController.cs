@@ -29,6 +29,8 @@ public class ShooterController : MonoBehaviour
     {
         int healAmount = param.GetIntExtra(ParamNames.HEALTH_PICKUP_HEAL, 0);
         Hp += healAmount;
+
+        Hp = Mathf.Clamp(Hp, 0, 100);
     }
 
     void pickupWeapon(Parameters param)
