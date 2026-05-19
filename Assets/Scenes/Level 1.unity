@@ -3662,6 +3662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511294751}
   - component: {fileID: 511294752}
+  - component: {fileID: 511294753}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -3776,6 +3777,19 @@ MonoBehaviour:
   enemiesText: {fileID: 1508107400}
   passengersIcon: {fileID: 1603599690}
   passengersText: {fileID: 1523414053}
+--- !u!114 &511294753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511294750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9726265860486ba05e29fd801305e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelDefinition: {fileID: 11400000, guid: f1f7a2438ff245a2a354033a17ef66fd, type: 2}
 --- !u!1001 &527158960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14566,7 +14580,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Jeepney Scene
+          m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1575941996

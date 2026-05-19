@@ -29,6 +29,11 @@ public class JeepneyMovement : MonoBehaviour
     private float directionFactor;
     [SerializeField] private float turningDecay;
 
+    [Header("Auto Align")]
+    [SerializeField] private float autoAlignDelay = 0.6f;
+    [SerializeField] private float autoAlignSpeed = 180f;
+    [SerializeField] private float autoAlignSmoothTime = 0.8f;
+
     // Inputs
     [SerializeField] private KeyCode accelerateKey;
     [SerializeField] private KeyCode decelerateKey;
@@ -44,6 +49,8 @@ public class JeepneyMovement : MonoBehaviour
 
     [SerializeField] private float decelerateInputTime;
     private float decelerateInputTimer;
+    private float noInputTimer;
+    private float autoAlignAngularVelocity;
 
     // Flags
     private bool accelerating;
@@ -90,6 +97,8 @@ public class JeepneyMovement : MonoBehaviour
         else if (turningLeft) Turn('L');
         else directionFactor = 0;
 
+        if (noInputTimer >= autoAlignDelay) AutoAlignToCardinal();
+
         ApplyTurningFriction();
         if (turningLeft || turningRight) ApplyLateralFriction(2f);
 
@@ -118,6 +127,13 @@ public class JeepneyMovement : MonoBehaviour
         else accelerateInputTimer -= Time.deltaTime * 2;
 
         accelerateInputTimer = Mathf.Clamp(accelerateInputTimer, 0, 4.5f);
+
+        if (turningLeft || turningRight)
+        {
+            noInputTimer = 0;
+            autoAlignAngularVelocity = 0f;
+        }
+        else noInputTimer += Time.deltaTime;
     }
 
     // FixedUpdate Functions ---------------------------------------------------
@@ -179,6 +195,22 @@ public class JeepneyMovement : MonoBehaviour
         Vector2 forward = rb.transform.up;
         float forwardSpeed = Vector2.Dot(rb.linearVelocity, forward);
         rb.linearVelocity = forward * forwardSpeed;
+    }
+
+    void AutoAlignToCardinal()
+    {
+        float current = rb.rotation;
+        float target = Mathf.Round(current / 90f) * 90f;
+        float newAngle = Mathf.SmoothDampAngle(
+            current,
+            target,
+            ref autoAlignAngularVelocity,
+            autoAlignSmoothTime,
+            autoAlignSpeed,
+            Time.fixedDeltaTime
+        );
+        rb.MoveRotation(newAngle);
+        rb.angularVelocity = 0f;
     }
 
     void ApplyLateralFriction(float intensity)
